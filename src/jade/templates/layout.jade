@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+html(lang="en")
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    block title
+        title DEVELOPMENT TITLE
+
+    link(rel="stylesheet", href="/bower/bootstrap/dist/css/bootstrap.min.css")
+    link(rel="stylesheet", href="/css/style.css")
+body
+    .container
+        .row
+            .col-xs-12
+                include header
+
+        .row
+            .col-xs-12
+                content.content
+                    block content
+
+
+        .row
+            .col-xs-12
+                include footer
+
+
+    script(src="/bower/jquery/dist/jquery.min.js")
+    script(src="/js/app.js")
