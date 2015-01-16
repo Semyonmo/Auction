@@ -1,0 +1,21 @@
+extends templates/layout
+
+block title
+    title sold DEVELOPMENT TITLE
+
+block content
+    .section
+        ol.breadcrumb
+            li
+                a(href="index.html") Главная
+            li
+                a(href="active.html") Активные лоты
+            li.active
+                a(href="#") Картина якорь
+        h1 Подводная картина «Якорь»
+        .row
+            .col-xs-10
+                include templates/item/full__item
+            .col-xs-2
+                include templates/sidebar/sidebar-news
+                include templates/sidebar/sidebar-ad

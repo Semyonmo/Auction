@@ -1,0 +1,89 @@
+.news {
+  &__item {
+    &-wrapper {
+      display: table;
+      margin-bottom: 20px;
+      p {
+        font-size: 14px;
+        font-family: "Ubuntu Light";
+        color: rgb(48, 48, 48);
+        -moz-transform: matrix(0.99910049462073, 0, 0, 1.00226404169222, 0, 0);
+        -webkit-transform: matrix(0.99910049462073, 0, 0, 1.00226404169222, 0, 0);
+        -ms-transform: matrix(0.99910049462073, 0, 0, 1.00226404169222, 0, 0);
+      }
+    }
+    &-photo {
+      display: block;
+      width: 80px;
+      height: 60px;
+      background-size: 100%;
+      background-position: center;
+      margin-right: 20px;
+      margin-top: 5px;
+      &-wrapper {
+        display: table-cell;
+        vertical-align: top;
+        overflow: hidden;
+      }
+    }
+    &-description {
+      &-wrapper {
+        display: table-cell;
+        vertical-align: top;
+      }
+      &-title {
+        font-size: 20px;
+        font-family: "Ubuntu Light";
+        color: rgb(48, 48, 48);
+        text-decoration: none;
+      }
+      &-date {
+        font-size: 14px;
+        font-family: "Ubuntu";
+        font-weight: 300;
+        color: rgb(141, 141, 150);
+        font-style: italic;
+        -moz-transform: matrix(0.99910049462073, 0, 0, 1.00226404169222, 0, 0);
+        -webkit-transform: matrix(0.99910049462073, 0, 0, 1.00226404169222, 0, 0);
+        -ms-transform: matrix(0.99910049462073, 0, 0, 1.00226404169222, 0, 0);
+        margin-bottom: 5px;
+      }
+    }
+  }
+  &__page {
+    &-wrapper {
+      padding-top: 20px;
+      p {
+        font-size: 14px;
+        font-family: "Ubuntu";
+        color: rgb(48, 48, 48);
+        line-height: 1.5;
+        font-weight: 300;
+      }
+    }
+    &-photo {
+      width: 380px;
+      height: 285px;
+      background-position: center;
+      background-size: cover;
+      &-wrapper {
+        width: 380px;
+        margin-bottom: 20px;
+      }
+      &-description {
+        font-size: 13px;
+        font-family: "Ubuntu";
+        color: rgb(141, 141, 150);
+        font-style: italic;
+        font-weight: 300;
+        margin-top: 5px;
+        text-align: right;
+      }
+    }
+    &-description{
+      &-wrapper{
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

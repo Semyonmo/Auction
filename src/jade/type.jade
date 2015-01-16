@@ -1,0 +1,66 @@
+extends templates/layout
+
+block title
+   title type DEVELOPMENT TITLE
+
+block content
+   .section
+      ol.breadcrumb
+         li
+            a(href="index.html") Главная
+         li
+            a(href="#") Где то по дороге
+         li.active
+            a(href="#") Текущяя
+      h1 #{title_single}
+      .row
+         .col-xs-10
+            .type-wrapper
+               p #{lorem}
+               h2 #{title_single}
+               h2 #{title_double}
+               p #{lorem}
+               h3 #{title_single}
+               h3 #{title_double}
+               p #{lorem}
+               a(href="1") Пример ссылки
+               h4 #{title_single}
+               h4 #{title_double}
+               p #{lorem}
+               a(href="#") Пример ссылки
+               h4 Список маркированный
+               ul
+                  each item in list
+                     li #{item.text}
+                     li #{item.text}
+                     li #{item.text}
+                     li #{item.text}
+                     li #{item.text}
+               h4 Список маркированный
+               ol
+                  each item in list
+                     li #{item.text}
+                     li #{item.text}
+                     li #{item.text}
+                     li #{item.text}
+                     li #{item.text}
+               h3 Таблица
+               table
+                  tr
+                     each hed in table_hed
+                        th #{hed.text}
+                  tr
+                     each item in table_item
+                        td #{item.text}
+                  tr
+                     each item in table_item
+                        td #{item.text}
+                  tr
+                     each item in table_item
+                        td #{item.text}
+               blockquote #{lorem}
+                  cite
+                      b Автор?
+         .col-xs-2
+            include templates/sidebar/sidebar-news
+            include templates/sidebar/sidebar-ad

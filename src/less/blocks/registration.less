@@ -1,0 +1,144 @@
+.registration {
+  &__form {
+    &-wrapper {
+      width: 100%;
+      border-right: 1px solid #dfdfe6;
+      &.form_group{
+        margin-bottom: 20px;
+      }
+    }
+    &-label {
+      font-size: 13px;
+      font-family: "Ubuntu";
+      font-weight: 300;
+      color: rgb(48, 48, 48);
+      margin-bottom: 10px;
+      &-additional {
+        font-size: 12px;
+        font-family: "Ubuntu";
+        color: rgb(150, 150, 158);
+        font-style: italic;
+        font-weight: 300;
+        padding-left: 5px;
+      }
+    }
+    &-input {
+      width: 80%;
+      height: 25px;
+      border-radius: 0;
+      padding: 0 5px;
+      &-success{
+        display: none;
+        position: absolute;
+        height: 17px;
+        width: 16px;
+        color: #3fb987;
+        bottom: 0;
+        top: 0;
+        margin: 2px auto;
+        right: 36px;
+        &:before{
+          content: "\f00c";
+          font-family: "AweSome";
+          font-size: 16px;
+          font-style: italic;
+        }
+      }
+      &-error{
+        display: none;
+        position: absolute;
+        height: 17px;
+        width: 16px;
+        color: #c44c4c;
+        bottom: 0;
+        top: 0;
+        margin: 2px auto;
+        right: 36px;
+        &:before{
+          content: "\f00d";
+          font-family: "AweSome";
+          font-size: 16px;
+          font-weight: 300;
+        }
+      }
+      &-wrapper{
+        position: relative;
+      }
+    }
+    &-remind{
+      &-link{
+        margin-left: 15px;
+      }
+    }
+  }
+  &__login{
+    &-wrapper{
+      a{
+        text-decoration: none;
+        margin-bottom: 10px;
+        margin-right: 5px;
+      }
+    }
+    &-social{
+      &-facebook{
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: top;
+        height: 31px;
+        width: 31px;
+        position: relative;
+        border-radius: 4px;
+        margin: 0;
+        &:before{
+          content: "\f082";
+          font-family: "AweSome";
+          font-size: 36px;
+          color: #3b5998;
+          position: absolute;
+          top: -10px;
+          left: 0px;
+        }
+      }
+      &-vk{
+        display: inline-block;
+        vertical-align: top;
+        height: 31px;
+        background-color: #587ab5;
+        width: 31px;
+        position: relative;
+        border-radius: 4px;
+        margin: 0;
+        &:before{
+          content: "\f189";
+          font-family: "AweSome";
+          position: absolute;
+          font-size: 20px;
+          color: #ffffff;
+          top: 0;
+          bottom: 0;
+          left: 5px;
+        }
+      }
+      &-gp{
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: top;
+        height: 31px;
+        width: 31px;
+        position: relative;
+        border-radius: 4px;
+        margin: 0;
+        background-color: #d13f2d;
+        &:before{
+          content: "\f0d5";
+          font-family: "AweSome";
+          font-size: 20px;
+          color: #ffffff;
+          position: absolute;
+          top: 2px;
+          left: 7px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.user__form-wrapper
+   form(data-toggle="validator")
+      table
+         tr
+            td.user__form-table-label-cell
+               label(for="name") Имя
+            td.user__form-table-input-cell
+               input(type="text" name="name" id="name" required).user__form-input.form-control
+         tr
+            td.user__form-table-label-cell
+               label(for="mail").label-control E-mail
+            td.user__form-table-input-cell
+               .form-group.user__form-input-wrapper
+                  input(type="email" name="email" id="mail" data-error="Неверно" required).user__form-input.form-control
+                  .help-block.with-errors.user__form-input-alert
+         tr
+            td.user__form-table-label-cell
+               label(for="nick") Никнейм
+            td.user__form-table-input-cell
+               .form-group.user__form-input-wrapper
+                  input(type="text" name="nickname" id="nick" data-error="Неверно" required).user__form-input.form-control
+                  .help-block.with-errors.user__form-input-alert
+      h4 Адрес доставки
+      .user__form-adress-wrapper
+         table
+            tr
+               td.user__form-adress-table-label-cell
+                  label(for="street") Улица,дом,квартира
+               td
+                  input(type="text" name="street" id="street").user__form-input.form-control
+            tr
+               td.user__form-adress-table-label-cell
+                  label(for="city") Город
+               td
+                  input(type="text" name="city" id="city").user__form-input.form-control
+            tr
+               td.user__form-adress-table-label-cell
+                  label(for="country") Страна
+               td
+                  input(type="text" name="country" id="country").user__form-input.form-control
+            tr
+               td.user__form-adress-table-label-cell
+                  label(for="phone") Контактный телефон
+               td
+                  .form-group.user__form-input-wrapper
+                     input(type="text" name="phone" id="phone" data-error="Неверно" required).user__form-input.form-control
+                     .help-block.with-errors.user__form-input-alert
+      button.user__form-submit-save.btn.btn-primary(type="submit") Сохранить
+
+      input.user__form-submit-cancel(type="submit" value="Отмена")

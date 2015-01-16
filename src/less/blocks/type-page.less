@@ -1,0 +1,69 @@
+.type-wrapper {
+  p {
+    font-size: 14px;
+    font-family: "Ubuntu";
+    font-weight: 300;
+    color: rgb(48, 48, 48);
+    line-height: 1.5;
+    margin: 10px 0;
+  }
+  a {
+    font-size: 14px;
+    font-family: "Ubuntu";
+    font-weight: 300;
+    color: #54aa9c;
+    text-decoration: underline;
+    line-height: 1.5;
+    &:hover, &:active {
+      color: #62bfb0;
+      text-decoration: none;
+    }
+    &:visited {
+      color: #358279;
+    }
+  }
+  ul {
+    list-style: none;
+    li {
+      color: rgb(48, 48, 48);
+      position: relative;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      font-size: 14px;
+      font-family: "Ubuntu";
+      font-weight: 300;
+      line-height: 1.5;
+      &:before {
+        content: "\2022";
+        font-size: 30px;
+        position: absolute;
+        left: -17px;
+        top: -13px;
+        color: rgb(58, 174, 160);
+      }
+    }
+  }
+  ol {
+    list-style: none;
+    counter-reset: count;
+    li {
+      color: rgb(48, 48, 48);
+      position: relative;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      font-size: 14px;
+      font-family: "Ubuntu";
+      font-weight: 300;
+      line-height: 1.5;
+      &:before {
+        counter-increment: count;
+        content: counter(count) ".";
+        padding-right: 5px;
+        color: rgb(58, 174, 160);
+        font-family: "Ubuntu";
+        position: absolute;
+        left: -17px;
+      }
+    }
+  }
+}

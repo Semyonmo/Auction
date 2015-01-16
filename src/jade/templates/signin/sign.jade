@@ -1,0 +1,17 @@
+.registration__form-wrapper
+   span.user__alert.valid Изменения сохранены
+   form(data-toggle="validator")
+      .form-group.registration__form-input-group
+         label(for="mail").registration__form-label E-mail
+         .registration__form-input-wrapper
+            input(type="email" name="mail" id="mail" placeholder="Введите действительный E-mail" required).form-control.registration__form-input
+            .registration__form-input-success
+            .registration__form-input-error
+      .registration__form-input-group.form-group
+         label(for="password").registration__form-label Пароль
+         .registration__form-input-wrapper
+            input(type="password" name="password" id="password" data-minlength="6" placeholder="Введите пароль" required).form-control.registration__form-input
+            .registration__form-input-success
+            .registration__form-input-error
+      button.user__form-submit-save.btn.btn-primary(type="submit") Войти
+      a(href="#").registration__form-remind-link Напомнить пароль

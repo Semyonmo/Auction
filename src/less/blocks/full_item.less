@@ -1,0 +1,265 @@
+.full-item {
+  &__time {
+    font-size: 15px;
+    font-family: "Ubuntu";
+    font-weight: 300;
+    color: rgb(48, 48, 48);
+    margin-left: 5px;
+    &-wrapper {
+      font-size: 13px;
+      font-family: "Ubuntu";
+      font-weight: 300;
+      color: rgb(141, 141, 150);
+      margin-bottom: 10px;
+    }
+  }
+  &__item {
+    &-wrapper {
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgb(223, 223, 230);
+    }
+    &-gallery {
+      &-wrapper {
+        width: 380px;
+        height: 460px;
+        background: grey;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 8px;
+      }
+    }
+    &-info {
+      &-wrapper {
+        width: 380px;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 5px;
+        margin-bottom: 20px;
+      }
+      &-last-bet {
+        &-label {
+          text-transform: uppercase;
+          font-size: 13px;
+          font-family: "Ubuntu";
+          font-weight: 300;
+          color: rgb(141, 141, 150);
+        }
+        &-cost {
+          font-size: 24px;
+          font-family: "Ubuntu";
+          font-weight: 500;
+          color: rgb(48, 48, 48);
+          text-transform: uppercase;
+        }
+      }
+      &-history {
+        text-transform: none;
+        float: right;
+        font-size: 13px;
+        font-family: "Ubuntu";
+        font-weight: 300;
+        color: #54aa9c;
+        text-decoration: underline;
+        &:hover, &:active {
+          text-decoration: none;
+          color: #62bfb0;
+        }
+        &:visited {
+          color: #54aa9c;
+          text-decoration: underline;
+        }
+      }
+      &-title {
+        display: inline-block;
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-family: "Ubuntu";
+        font-weight: 300;
+        color: rgb(84, 170, 156);
+        &:hover {
+          color: rgb(73, 145, 131);
+          text-decoration: none;
+        }
+      }
+      &-author {
+        &-wrapper {
+          margin-bottom: 20px;
+        }
+        &-label {
+          font-size: 13px;
+          font-family: "Ubuntu";
+          font-weight: 300;
+          color: rgb(48, 48, 48);
+          padding-right: 5px;
+        }
+        &-link {
+          font-size: 13px;
+          font-family: "Ubuntu";
+          font-weight: 300;
+          color: #54aa9c;
+          &:hover {
+            color: #62bfb0;
+          }
+        }
+      }
+      &-description {
+        &-wrapper {
+          margin-bottom: 20px;
+        }
+        &-text {
+          font-size: 13px;
+          font-family: "Ubuntu";
+          font-weight: 300;
+          color: rgb(48, 48, 48);
+          line-height: 1.385;
+          margin-bottom: 0;
+        }
+        &-more {
+          font-size: 13px;
+          font-family: "Ubuntu";
+          font-weight: 300;
+          color: #54aa9c;
+          &:hover {
+            color: #62bfb0;
+          }
+        }
+      }
+    }
+
+  }
+  &__form {
+    &-wrapper {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      button, html input[type=submit] {
+        -webkit-appearance: button;
+        cursor: default;
+      }
+      a {
+        font-size: 14px;
+        font-family: "Ubuntu";
+        font-weight: 300;
+        color: #54aa9c;
+        text-decoration: underline;
+        line-height: 1.5;
+        &:hover, &:active {
+          color: #62bfb0;
+          text-decoration: none;
+        }
+        &:visited {
+          color: #358279;
+        }
+      }
+    }
+    &-input {
+      border: 1px solid rgb(223, 223, 230);
+      background-color: rgb(250, 251, 252);
+      width: 21%;
+      padding-left: 10px;
+      font-size: 13px;
+      font-family: "Ubuntu Light";
+      color: rgb(48, 48, 48);
+      margin-bottom: 10px;
+      &:focus {
+        outline-color: #54aa9c;
+      }
+    }
+    &-label {
+      font-size: 13px;
+      font-family: "Ubuntu";
+      font-weight: 300;
+      color: rgb(48, 48, 48);
+    }
+    &-submit {
+      display: block;
+      border-radius: 2px;
+      background-color: rgb(206, 206, 217);
+      border: 2px solid rgb(206, 206, 217);
+      font-size: 13px;
+      font-family: "Ubuntu";
+      font-weight: 300;
+      color: rgb(255, 255, 255);
+      text-transform: uppercase;
+      padding: 6px 12px;
+      margin-bottom: 10px;
+      &:focus {
+        outline: none;
+      }
+      &.active {
+        transition: 400ms;
+        color: rgb(247, 247, 252);
+        background-color: rgb(77, 77, 84);
+        border-color: rgb(77, 77, 84);
+        button, html input[type=submit] {
+          -webkit-appearance: button;
+          cursor: pointer;
+        }
+        &:hover {
+          background-color: #ffffff;
+          color: rgb(77, 77, 84);
+          transition: 400ms;
+        }
+      }
+    }
+    &-minimal-bet {
+      font-size: 13px;
+      font-family: "Ubuntu";
+      font-weight: 300;
+      color: rgb(141, 141, 150);
+      font-style: italic;
+    }
+    &-alert {
+      font-size: 13px;
+      font-family: "Ubuntu";
+      font-weight: 300;
+      color: rgb(141, 141, 150);
+      font-style: italic;
+    }
+  }
+  &__share {
+    &-title {
+      display: inline-block;
+      font-size: 13px;
+      font-family: "Ubuntu";
+      font-weight: 300;
+      color: rgb(48, 48, 48);
+      margin-bottom: 5px;
+    }
+  }
+  &__description {
+    &-wrapper {
+      a {
+        font-size: 14px;
+        font-family: "Ubuntu";
+        font-weight: 300;
+        color: #54aa9c;
+        text-decoration: underline;
+        line-height: 1.5;
+        &:hover, &:active {
+          color: #62bfb0;
+          text-decoration: none;
+        }
+        &:visited {
+          color: #358279;
+        }
+      }
+    }
+    &-title {
+      font-size: 26px;
+      font-family: "Ubuntu";
+      font-weight: 300;
+      color: rgb(48, 48, 48);
+      font-variant: small-caps;
+      margin-bottom: 15px;
+    }
+    &-photo{
+      width: 540px;
+      height: 270px;
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+  }
+}

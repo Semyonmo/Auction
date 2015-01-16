@@ -1,0 +1,36 @@
+extends templates/layout
+
+block title
+   title history DEVELOPMENT TITLE
+
+block content
+   .section
+      ol.breadcrumb
+         li
+            a(href="index.html") Главная
+         li
+            a(href="active.html") Активные лоты
+         li
+            a(href="kartina-yakor.html") Картина якорь
+         li.active
+            a(href="#") История ставок
+      h1 История ставок
+      .row
+         .col-xs-10
+            table
+               tr
+                  each hed in table_hed
+                     th #{hed.text}
+               tr.you
+                  each item in table_item
+                     td #{item.text}
+               tr
+                  each item in table_item
+                     td #{item.text}
+               tr
+                  each item in table_item
+                     td #{item.text}
+            a(href="kartina-yakor.html") Назад к лоту
+         .col-xs-2
+            include templates/sidebar/sidebar-news
+            include templates/sidebar/sidebar-ad

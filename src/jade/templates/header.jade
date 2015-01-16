@@ -1,5 +1,40 @@
 header.header
-   nav.menu
-         each item in menu
-            .menu-item: a(href="#{item.href}") #{item.text}
+    a(href="/")
+        h1
+            .header__logo
+                span.header__logo-text уникальные предметы, согретые магией байкала
+    .row
+        .col-xs-12
+            .header__registration-group-wrapper
+                .header__lang-wrapper
+                    ul.header__lang-list
+                        li.header__lang-list-item
+                            a(href="ya.ru").header__lang-list-item-link eng
+                        li.header__lang-list-item
+                            a(href="#").header__lang-list-item-link.active рус
+                        li.header__lang-list-item
+                            a(href="#").header__lang-list-item-link 简体中文
 
+                .header__registration-wrapper
+                    ul.header__registration-list
+                        li.header__registration-list-item
+                            a(href="#").header__registration-list-item-link регистрация
+                        li.header__registration-list-item
+                            a(href="#").header__registration-list-item-link вход
+
+
+                    ul.header__registration-list.active
+                        li.header__registration-list-item
+                            a(href="user.html").header__registration-list-item-link личный кабинет
+                .header__time-wrapper
+                    span.header__time 11:21 21 dec 2015
+        .col-xs-12
+            nav.header__menu-wrapper
+                ul.header__menu-list
+                    each item in menu
+                        li.header__menu-list-item
+                            a(href="#{item.href}").header__menu-list-item-link #{item.text}
+                            ul.header__submenu-list
+                                each subItem in item.subMenu
+                                    li.header__submenu-list-item
+                                        a(href="#{subItem.href}").header__submenu-list-item-link #{subItem.text}

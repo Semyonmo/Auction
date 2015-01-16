@@ -1,0 +1,26 @@
+extends templates/layout
+
+block title
+   title news DEVELOPMENT TITLE
+
+block content
+   .section
+      ol.breadcrumb
+         li
+            a(href="index.html") Главная
+         li
+            a(href="news-list.html") Новости
+         li.active
+            a(href="#") В Листвянке (западный берег Байкала) прошла выставка картин Юрия Алексеева
+      .row
+         .col-xs-10
+            h2 В Листвянке (западный берег Байкала) прошла выставка картин Юрия Алексеева
+            .news__item-description-date 21 sep 14
+      .row
+         .col-xs-10
+            include  templates/news/news-page
+         .col-xs-2
+            include templates/sidebar/sidebar-news
+            include templates/sidebar/sidebar-ad
+
+

@@ -1,0 +1,23 @@
+extends templates/layout
+
+block title
+   title active DEVELOPMENT TITLE
+
+block content
+   .section
+      ol.breadcrumb
+         li
+            a(href="index.html") Главная
+         li.active
+            a(href="#") Активные лоты
+      h1 Активные лоты
+      .row
+         .col-xs-10
+            include templates/item/item
+            include templates/item/item
+            include templates/item/item
+            include templates/item/item
+            include templates/item/item
+         .col-xs-2
+            include templates/sidebar/sidebar-news
+            include templates/sidebar/sidebar-ad

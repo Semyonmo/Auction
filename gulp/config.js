@@ -4,9 +4,9 @@ var src = './src';
 module.exports = {
   browserSync: {
     server: {
-      // We're serving the src folder as well
-      // for sass sourcemap linking
-      baseDir: [dest, src]
+      baseDir: [dest, src],
+      open: "external",
+      port: 8080
     },
     files: [
       dest + "/**",
@@ -54,6 +54,9 @@ module.exports = {
     bundleConfigs: [{
       src: src + '/assets/fonts/**',
       dest: dest + '/fonts'
+    }, {
+      src: src + '/assets/js/validator.js',
+      dest: dest + '/js'
     }]
   }
 };

@@ -1,0 +1,137 @@
+.item {
+  &__wrapper {
+    width: 100%;
+    border: 1px solid rgb(186, 230, 209);
+    background-color: rgb(247, 255, 251);
+    padding: 20px;
+    min-height: 340px;
+    margin-bottom: 20px;
+    &.sale {
+      &.item__wrapper {
+        border: 1px solid rgb(210, 210, 214);
+        background-color: rgb(247, 247, 250);
+      }
+      .item__photo-wrapper {
+        &:after {
+          display: inline-block;
+        }
+      }
+    }
+  }
+  &__photo {
+    &-wrapper {
+      position: relative;
+      margin-right: 20px;
+      float: left;
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+      &:after {
+        display: none;
+        position: absolute;
+        content: " ";
+        bottom: 0;
+        right: 0;
+        width: 190px;
+        height: 158px;
+        background: url("../img/sale-alert.png") no-repeat 0 0;
+      }
+      &:hover {
+        .item__photo {
+          transition: 400ms;
+          transform: scale(1);
+        }
+      }
+    }
+    transition: 400ms;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    margin-right: 20px;
+    transform: scale(1.2);
+  }
+  &__info {
+    &-title {
+      display: inline-block;
+      margin-top: 0px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      font-family: "Ubuntu";
+      font-weight: 300;
+      text-decoration: none;
+      color: rgb(84, 170, 156);
+      &:hover {
+        color: rgb(73, 145, 131);
+        text-decoration: none;
+      }
+    }
+    &-last-bet {
+      &-wrapper {
+        margin-bottom: 20px;
+      }
+      &-text {
+        font-size: 13px;
+        font-family: "Ubuntu";
+        font-weight: 300;
+        color: rgb(141, 141, 150);
+        text-transform: uppercase;
+      }
+      &-cost {
+        font-size: 24px;
+        font-family: "Ubuntu";
+        font-weight: 500;
+        color: rgb(48, 48, 48);
+        text-transform: uppercase;
+      }
+    }
+    &-author {
+      &-wrapper {
+        margin-bottom: 20px;
+      }
+      &-label {
+        font-size: 13px;
+        font-family: "Ubuntu";
+        font-weight: 300;
+        color: rgb(48, 48, 48);
+        padding-right: 5px;
+      }
+      &-link {
+        font-size: 13px;
+        font-family: "Ubuntu";
+        font-weight: 300;
+        color: #54aa9c;
+        &:hover {
+          color: #62bfb0;
+        }
+      }
+    }
+    &-description {
+      &-wrapper {
+        margin-bottom: 20px;
+      }
+      &-text {
+        font-size: 13px;
+        font-family: "Ubuntu";
+        font-weight: 300;
+        color: rgb(48, 48, 48);
+        line-height: 1.385;
+        margin-bottom: 0px;
+      }
+      &-more {
+        font-size: 13px;
+        font-family: "Ubuntu";
+        font-weight: 300;
+        color: #54aa9c;
+        &:hover {
+          color: #62bfb0;
+        }
+      }
+    }
+    &-time {
+      font-size: 13px;
+      font-family: "Ubuntu";
+      font-weight: 300;
+      color: rgb(120, 120, 127);
+    }
+  }
+}

@@ -1,27 +1,131 @@
-.app-header {
-  position: relative;
-  padding-top: 100px;
-  height: 400px;
-  background-image: url('/img/concrete_wall.png');
-//  background-size: cover;
-//  background-position: center center;
-  color: white;
-
-  &-social {
+.header {
+  h1 {
+    position: relative;
+    margin: 0;
+  }
+  a{
+    text-decoration: none;
+  }
+  &__logo {
     position: absolute;
-    top: 385px;
-    right: 10px;
+    display: inline-block;
+    width: 375px;
+    height: 57px;
+    z-index: 999;
+    top: 33px;
+    background: url("../img/baikal-logo.png") no-repeat 0 0;
+    &-text {
+      font-size: 12px;
+      font-family: "Ubuntu";
+      font-weight: 300;
+      color: rgb(84, 170, 156);
+      text-transform: uppercase;
+      line-height: 1.667;
+      text-align: right;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      letter-spacing: 0.2px;
+    }
   }
-  &-title {
-    font-size: 4.24em;
-    text-align: center;
+  &__lang {
+    &-wrapper {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 18px;
+      margin-left: 10px;
+    }
+    &-list {
+      display: table;
+      list-style: none;
+      padding-left: 0;
+      &-item {
+        text-transform: uppercase;
+        display: table-cell;
+        &-link {
+          font-size: 13px;
+          color: #6c6c73;
+          font-family: "Ubuntu";
+          font-weight: 300;
+          padding: 10px;
+          &.active {
+            color: #54aa9c;
+          }
+          &:hover {
+            color: #54aa9c;
+          }
+        }
+        &:before {
+          content: " | ";
+          color: #dfdfe6;
+          font-size: 15px;
+        }
+        &:first-child {
+          &:before {
+            content: " ";
+          }
+        }
+      }
+    }
   }
-  canvas {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  &__registration {
+    &-group {
+      &-wrapper {
+        margin-top: 11px;
+        text-align: right;
+        margin-bottom: 20px;
+      }
+    }
+    &-wrapper {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 18px;
+      margin-right: 20px;
+    }
+    &-list {
+      display: none;
+      list-style: none;
+      padding-left: 0;
+      &-item {
+        text-transform: uppercase;
+        display: table-cell;
+        &-link {
+          font-size: 13px;
+          color: #6c6c73;
+          font-family: "Ubuntu";
+          font-weight: 300;
+          padding: 10px;
+          &:hover {
+            color: #54aa9c;
+          }
+        }
+        &:before {
+          content: " | ";
+          color: #dfdfe6;
+          font-size: 15px;
+        }
+        &:first-child {
+          &:before {
+            content: " ";
+          }
+        }
+      }
+      &.active {
+        display: table;
+      }
+    }
+  }
+  &__time {
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #8d8d96;
+    font-family: "Ubuntu";
+    font-weight: 300;
+    &-wrapper {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 10px;
+    }
+  }
 
-  }
 }

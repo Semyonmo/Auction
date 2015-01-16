@@ -1,0 +1,29 @@
+extends templates/layout
+
+block title
+    title myuser DEVELOPMENT TITLE
+
+block content
+    .section
+        ol.breadcrumb
+            li
+                a(href="index.html") Главная
+            li
+                a(href="user.html") Личный кабинет
+            li.active
+                a(href="#") Мои ставки
+        h1 Личный кабинет
+        .row
+            .col-xs-3
+               include templates/user/menu
+            .col-xs-9
+               h3 Профиль
+               span.user__alert.valid Изменения сохранены
+               .row
+                  .col-xs-9
+                     include templates/user/form
+                  .col-xs-3
+                     include templates/sidebar/sidebar-news
+                     include templates/sidebar/sidebar-ad
+
+

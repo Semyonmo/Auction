@@ -1,0 +1,110 @@
+.footer {
+  a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  font-family: "Ubuntu";
+  font-weight: 300;
+  &__menu {
+    &-wrapper {
+      a {
+        color: #e2ebea;
+        text-decoration: underline;
+        font-size: 12px;
+        &:hover, &:active {
+          color: #8adbce;
+          text-decoration: none;
+        }
+      }
+      margin-bottom: 75px;
+    }
+    &-title {
+      color: #e2ebea;
+      font-family: "Ubuntu";
+      font-size: 16px;
+      margin-bottom: 14px;
+      font-weight: 300;
+      margin-top: 0;
+    }
+    &-list {
+      font-family: "Ubuntu";
+      font-weight: 300;
+      list-style: none;
+      padding-left: 0;
+      &-item {
+        margin-bottom: 7px;
+        text-transform: uppercase;
+        margin-right: -10px;
+        &-link {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &__contacts {
+    &-wrapper {
+      text-align: right;
+    }
+    &-phone {
+      &-wrapper {
+        margin-bottom: 14px;
+      }
+      &-code {
+        color: #8adbce;
+        font-size: 13px;
+      }
+      &-link {
+        display: inline-block;
+        margin-left: 5px;
+        color: #e2ebea;
+        font-size: 16px;
+        &:hover {
+          color: #8adbce;
+        }
+      }
+    }
+    &-mail {
+      &-link {
+        display: inline-block;
+        color: #e1eae9;
+        font-size: 13px;
+        border-bottom: 1px dotted #e1eae9;
+        line-height: 14px;
+        &:hover {
+          color: #8adbce;
+          border-bottom: 1px dotted transparent;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__white-text {
+    color: #e2ebea;
+    font-size: 12px;
+  }
+  &__developer {
+    &-wrapper {
+      text-align: right;
+    }
+    &-text {
+      display: inline-block;
+      color: #e2ebea;
+      font-size: 12px;
+      &:hover, &:active, &:focus {
+        color: #8adbce;
+        text-decoration: none;
+        .footer__developer-logo {
+          background-position: -80px 0;
+        }
+      }
+    }
+    &-logo {
+      margin-left: 10px;
+      margin-bottom: -5px;
+      display: inline-block;
+      width: 70px;
+      height: 20px;
+      background: url("../img/develop-logo-sprite.png") no-repeat 0 0;
+    }
+  }
+}

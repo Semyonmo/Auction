@@ -1,0 +1,23 @@
+extends templates/layout
+
+block title
+    title signin DEVELOPMENT TITLE
+
+block content
+    .section
+        ol.breadcrumb
+            li
+                a(href="index.html") Главная
+            li.active
+                a(href="#") Регистрация
+        h1 Регистрация
+        .row
+            .col-xs-10
+                .row
+                    .col-xs-6
+                        include templates/signin/sign
+                    .col-xs-6
+                        include templates/signin/registration
+            .col-xs-2
+                include templates/sidebar/sidebar-news
+                include templates/sidebar/sidebar-ad

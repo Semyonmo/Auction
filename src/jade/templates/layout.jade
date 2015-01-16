@@ -5,24 +5,21 @@ html(lang="en")
     block title
         title DEVELOPMENT TITLE
 
-    link(rel="stylesheet", href="/bower/bootstrap/dist/css/bootstrap.min.css")
+    link(href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css", rel="stylesheet")
+    link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", rel="stylesheet")
     link(rel="stylesheet", href="/css/style.css")
 body
     .container
-        .row
-            .col-xs-12
-                include header
+        .section.section-header
+            include header
 
-        .row
-            .col-xs-12
-                content.content
-                    block content
+        block content
 
-
-        .row
-            .col-xs-12
-                include footer
-
+        .section.section-footer
+            include footer
 
     script(src="/bower/jquery/dist/jquery.min.js")
+    script(src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53fe943118de2c15" async="async")
+    script(src="/bower/jquery.lazyload/jquery.lazyload.min.js")
+    script(src="/js/validator.js")
     script(src="/js/app.js")

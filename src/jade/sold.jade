@@ -1,0 +1,23 @@
+extends templates/layout
+
+block title
+    title sold DEVELOPMENT TITLE
+
+block content
+    .section
+        ol.breadcrumb
+            li
+                a(href="index.html") Главная
+            li.active
+                a(href="#") Проданные лоты
+        h1 Проданные лоты
+        .row
+            .col-xs-10
+                include templates/item/sale-item
+                include templates/item/sale-item
+                include templates/item/sale-item
+                include templates/item/sale-item
+                include templates/item/sale-item
+            .col-xs-2
+                include templates/sidebar/sidebar-news
+                include templates/sidebar/sidebar-ad

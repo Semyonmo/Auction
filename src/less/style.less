@@ -1,13 +1,220 @@
-@import "/blocks/menu";
-@import "/assets/fonts";
 @import "blocks/header";
+@import "blocks/footer";
+@import "blocks/content";
+@import "blocks/slider";
+@import "blocks/item-list";
+@import "blocks/item";
+@import "blocks/sidebar";
+@import "blocks/type-page";
+@import "blocks/full_item";
+@import "blocks/news";
+@import "blocks/user";
+@import "blocks/registration";
+@import "blocks/menu";
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic&subset=latin,cyrillic,cyrillic-ext,latin-ext);
 
-* {
-//  font-family: "Jaapokki Regular", sans-serif !important;
+body {
+  background-color: #f5fffe;
 }
 
-.svg-logo-text {
-  text {
-    color: white !important;
+.container {
+  width: 1024px;
+  padding: 0px;
+  opacity: 0.902;
+  box-shadow: 0px 0px 6.4px 1.6px rgba(0, 0, 0, 0.09);
+
+}
+
+.section {
+  padding: 0px 42px 30px 42px;
+  background-color: #ffffff;
+  &-footer {
+    background-color: #305856;
+    padding: 25px 42px 25px 42px;
   }
+  &-header {
+    border-bottom: 1px solid rgb(233, 233, 240);
+    padding: 0px 42px;
+  }
+  &-slider {
+    padding: 0px;
+  }
+  &-type {
+    padding: 15px 42px 0px 42px;
+  }
+}
+
+a {
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 10px;
+  tr, td, th {
+    border: 1px solid #dfdfe6;
+    padding: 6px 10px;
+  }
+  td, th {
+    &:first-child {
+      width: 24%;
+    }
+    &:last-child {
+      width: 12%;
+    }
+  }
+  th {
+    font-size: 13px;
+    font-family: "Ubuntu";
+    font-weight: 300;
+    color: rgb(141, 141, 150);
+    text-align: left;
+  }
+  td {
+    font-size: 13px;
+    font-family: "Ubuntu";
+    font-weight: 300;
+    color: rgb(48, 48, 48);
+    text-align: left;
+  }
+  tr {
+    &.you {
+      background-color: rgb(247, 247, 252);
+    }
+  }
+}
+
+.breadcrumb {
+  padding: 10px 0px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: transparent;
+  border-radius: 0px;
+  a {
+    font-size: 11px;
+    font-family: "Ubuntu";
+    font-weight: 300;
+    color: rgb(141, 141, 150);
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+      color: #62bfb0;
+    }
+  }
+  > li + li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: "";
+    font-family: "AweSome";
+    font-size: 12px;
+  }
+  > li + li.active {
+    a {
+      text-decoration: none;
+      cursor: default;
+      &:hover {
+        color: rgb(141, 141, 150);
+      }
+    }
+  }
+}
+
+h1 {
+  font-size: 36px;
+  font-family: "Ubuntu";
+  font-weight: 300;
+  color: rgb(48, 48, 48);
+  font-variant: small-caps;
+  line-height: 1.333;
+}
+
+h2 {
+  font-size: 28px;
+  font-family: "Ubuntu";
+  font-weight: 300;
+  color: rgb(48, 48, 48);
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 22px;
+  font-family: "Ubuntu";
+  font-weight: 300;
+  color: rgb(48, 48, 48);
+  line-height: 1.273;
+}
+
+h4 {
+  font-size: 18px;
+  font-family: "Ubuntu";
+  font-weight: 300;
+  color: rgb(48, 48, 48);
+  line-height: 1.278;
+}
+
+blockquote {
+  position: relative;
+  border: 0px;
+  padding: 0 40px;
+  margin-bottom: 50px;
+  font-size: 16px;
+  font-family: "Ubuntu";
+  font-weight: 300;
+  color: rgb(48, 48, 48);
+  line-height: 1.438;
+  &:before {
+    content: "«";
+    font-size: 56px;
+    font-family: "Ubuntu";
+    font-weight: 300;
+    font-style: italic;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: -30px;
+    color: #3aaea0;
+  }
+  &:after {
+    position: absolute;
+    content: "»";
+    font-size: 56px;
+    font-family: "Ubuntu";
+    font-weight: 300;
+    font-style: italic;
+    right: 0;
+    bottom: 0;
+    margin-bottom: -20px;
+    color: #3aaea0;
+  }
+  cite {
+    position: absolute;
+    margin-top: 10px;
+    display: block;
+    font-size: 16px;
+    font-family: "Ubuntu";
+    color: rgb(48, 48, 48);
+    line-height: 1.563;
+    font-style: normal;
+    font-weight: normal;
+  }
+}
+
+a {
+  font-size: 14px;
+  font-family: "Ubuntu";
+  font-weight: 300;
+  color: #54aa9c;
+  text-decoration: underline;
+  line-height: 1.5;
+  &:hover, &:active {
+    color: #62bfb0;
+    text-decoration: none;
+  }
+}
+
+.form-control:focus {
+  border-color: #54aa9c;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
+  box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
 }

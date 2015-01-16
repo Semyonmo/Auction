@@ -1,0 +1,191 @@
+.user {
+  &__menu {
+    &-wrapper {
+      width: 100%;
+      border: 1px dotted rgb(233, 233, 240);
+      background-color: rgb(255, 255, 255);
+      padding: 15px;
+    }
+    &-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      &-item {
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        a {
+          font-family: "Ubuntu";
+          font-weight: 300;
+          font-size: 13px;
+          color: #000000;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+            color: #54aa9c;
+          }
+        }
+        &.active {
+          a {
+            color: #54aa9c;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  &__alert {
+    font-size: 12px;
+    font-family: "Ubuntu";
+    color: rgb(63, 185, 135);
+    font-style: italic;
+    font-weight: 300;
+    display: none;
+    &.invalid {
+      display: block;
+      font-size: 12px;
+      font-family: "Ubuntu";
+      font-weight: 300;
+      color: rgb(196, 76, 76);
+      font-style: italic;
+    }
+    &.valid {
+      display: block;
+    }
+  }
+  &__form {
+    &-wrapper {
+      table {
+        tr, td {
+          border: none;
+        }
+        td {
+          label {
+            font-size: 13px;
+            font-family: "Ubuntu";
+            font-weight: 300;
+            color: rgb(48, 48, 48);
+          }
+          &.user__form-table-label-cell {
+            width: 6%;
+            padding: 0;
+          }
+        }
+      }
+      .form-group{
+        margin-bottom: 0px;
+      }
+    }
+    &-input {
+      border: 1px solid rgb(223, 223, 230);
+      background-color: rgb(250, 251, 252);
+      padding: 3px 7px;
+      width: 220px;
+      height: 26px;
+      border-radius: 0;
+      font-weight: 300;
+      font-size: 13px;
+      font-family: "Ubuntu";
+      color: rgb(48, 48, 48);
+      &-wrapper{
+        position: relative;
+      }
+      &-alert{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 50%;
+        margin-left: 60px;
+        font-style: italic;
+        margin-bottom: 0px;
+      }
+    }
+    &-adress {
+      &-wrapper {
+        margin-bottom: 20px;
+        table {
+          tr {
+            padding: 0;
+            &:last-child {
+              td {
+                &.user__form-adress-table-label-cell {
+                  padding: 10px 0;
+                }
+              }
+            }
+          }
+          td {
+            &.user__form-adress-table-label-cell {
+              padding: 6px 0;
+            }
+            &:last-child {
+              padding: 0;
+              width: 65%;
+            }
+          }
+        }
+      }
+    }
+    &-submit {
+      &-save {
+        border: 2px solid rgb(63, 185, 135);
+        border-radius: 2px;
+        background-color: rgb(63, 185, 135);
+        transition: 400ms;
+        font-size: 13px;
+        font-family: "Ubuntu";
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        padding: 5px 10px;
+        &:hover {
+          transition: 400ms;
+          background-color: #ffffff;
+          color: rgb(63, 185, 135);
+          border-color: rgb(63, 185, 135);
+        }
+        &.btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled.focus, .btn-primary[disabled].focus, fieldset[disabled] .btn-primary.focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active {
+          background-color: rgb(63, 185, 135);
+          border-color: rgb(63, 185, 135);
+          &:hover{
+            cursor: default;
+            color: #ffffff;
+          }
+        }
+      }
+      &-cancel {
+        border: 2px solid rgb(77, 77, 84);
+        border-radius: 2px;
+        background-color: rgb(77, 77, 84);
+        transition: 400ms;
+        font-size: 13px;
+        font-family: "Ubuntu";
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        padding: 5px 10px;
+        &:hover {
+          transition: 400ms;
+          background-color: #ffffff;
+          color: rgb(77, 77, 84);
+        }
+      }
+    }
+  }
+  &__bird {
+    &-item {
+      &-wrapper {
+        padding: 20px 0;
+        border-bottom: 1px solid #e9e9f0;
+      }
+      &-title {
+        font-size: 13px;
+        font-family: "Ubuntu";
+        font-weight: 300;
+        color: rgb(48, 48, 48);
+        margin-bottom: 10px;
+      }
+      &-more{
+        font-size: 13px;
+      }
+    }
+  }
+}

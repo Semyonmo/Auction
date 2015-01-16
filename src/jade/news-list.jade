@@ -1,0 +1,21 @@
+extends templates/layout
+
+block title
+   title news-list DEVELOPMENT TITLE
+
+block content
+   .section
+      ol.breadcrumb
+         li
+            a(href="index.html") Главная
+         li.active
+            a(href="#") Новости
+      h1 Новости
+      .row
+         .col-xs-10
+            include templates/news/news-item
+            include templates/news/news-item
+         .col-xs-2
+            include templates/sidebar/sidebar-news
+            include templates/sidebar/sidebar-ad
+

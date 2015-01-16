@@ -2,6 +2,7 @@ var jade       = require('gulp-jade');
 var path       = require('path');
 var gulp       = require('gulp');
 var fs         = require('fs');
+var browserSync = require('browser-sync');
 var handleErrors = require('../util/handleErrors');
 var config     = require('../config').jade;
 
@@ -12,5 +13,6 @@ gulp.task('jade', function() {
         locals: JSON.parse(fs.readFileSync(config.data, 'utf8'))
     }))
     .on('error', handleErrors)
-    .pipe(gulp.dest(config.dest));
+    .pipe(gulp.dest(config.dest))
+    .pipe(browserSync.reload({stream: true}));
 });
