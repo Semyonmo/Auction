@@ -2,64 +2,66 @@
   "menu": [
     {
       "text": "Как купить",
-      "href": "#",
-      "subMenu": [
-        {
-          "text": "Правила",
-          "href": "#"
-        },
-        {
-          "text": "Доставка и оплата",
-          "href": "#"
-        },
-        {
-          "text": "Помощь",
-          "href": "#"
-        }
-      ]
+      "href": "#"
     },
     {
       "text": "Лоты",
-      "href": "#",
-      "subMenu":[
-        {
-          "text": "Активные",
-          "href": "active.html"
-        },
-        {
-          "text": "Проданные",
-          "href": "sold.html"
-        }
-      ]
+      "href": "#"
     },
     {
       "text": "Новости",
-      "href": "news-list.html",
-      "subMenu":[
-        {
-          "text": " ",
-          "href": "#"
-        }
-      ]
+      "href": "news-list.html"
     },
     {
       "text": "О проекте",
-      "href": "#",
-      "subMenu":[
-        {
-          "text": "созданно байкалом",
-          "href": "#"
-        },
-        {
-          "text": "Контакты",
-          "href": "#"
-        }
-      ]
+      "href": "#"
     }
   ],
-  "list":[
+  "subMenu": [
+    [
+      {
+        "text": "Правила",
+        "href": "#"
+      },
+      {
+        "text": "Доставка и оплата",
+        "href": "#"
+      },
+      {
+        "text": "Помощь",
+        "href": "#"
+      }
+    ],
+    [
+      {
+        "text": "Активные",
+        "href": "active.html"
+      },
+      {
+        "text": "Проданные",
+        "href": "sold.html"
+      }
+    ],
+    [
+      {
+        "text": "Проданные",
+        "href": "sold.html"
+      }
+    ],
+    [
+      {
+        "text": "созданно байкалом",
+        "href": "#"
+      },
+      {
+        "text": "Контакты",
+        "href": "#"
+      }
+    ]
+  ],
+  "list": [
     {
-      "text" : "Строка списка"
+      "text": "Строка списка"
     }
   ],
   "table_hed": [
@@ -84,14 +86,14 @@
       "text": "5500000 $"
     }
   ],
-  "user_menu":[
+  "user_menu": [
     {
-      "text":"Мои лоты",
-      "href":"user_bird.html"
+      "text": "Мои лоты",
+      "href": "user_bird.html"
     },
     {
-      "text":"Профиль",
-      "href":"user.html"
+      "text": "Профиль",
+      "href": "user.html"
     }
   ],
   "title_double": "Заголовок состоящий из двух строк то текст-рыба, вэб-дизайне. Lorem Ipsum является стандартной",

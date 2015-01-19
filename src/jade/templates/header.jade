@@ -30,11 +30,20 @@ header.header
                     span.header__time 11:21 21 dec 2015
         .col-xs-12
             nav.header__menu-wrapper
-                ul.header__menu-list
-                    each item in menu
-                        li.header__menu-list-item
-                            a(href="#{item.href}").header__menu-list-item-link #{item.text}
-                            ul.header__submenu-list
-                                each subItem in item.subMenu
-                                    li.header__submenu-list-item
-                                        a(href="#{subItem.href}").header__submenu-list-item-link #{subItem.text}
+                .header__menu
+                    ul.header__menu-list
+                        each item in menu
+                            li.header__menu-list-item
+                                a(href="#{item.href}").header__menu-list-item-link #{item.text}
+                                ul.header__submenu-list
+                                    //each subItem in item.subMenu
+                                    //    li.header__submenu-list-item
+                                    //        a(href="#{subItem.href}").header__submenu-list-item-link #{subItem.text}
+
+            .header__menu-hover
+                each list in subMenu
+                    .header__submenu-list
+                        each item in list
+                            .header__submenu-list-item
+                                a.header__submenu-list-item-link(href="#{item.href}") #{item.text}
+
