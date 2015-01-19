@@ -22,10 +22,11 @@
       &-wrapper {
         width: 380px;
         height: 460px;
-        background: grey;
+        background: transparent;
         display: inline-block;
         vertical-align: top;
         margin-right: 8px;
+        position: relative;
       }
     }
     &-info {
@@ -261,5 +262,19 @@
       margin-bottom: 20px;
       margin-top: 20px;
     }
+  }
+}
+
+.photocradle{
+  display: block;
+  width: 380px;
+  height: 460px;
+}
+.photocradle .previewControl{
+  &.control-next{
+    display: none;
+  }
+  &.control-prev{
+    display: none;
   }
 }

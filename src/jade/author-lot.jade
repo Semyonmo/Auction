@@ -1,0 +1,22 @@
+extends templates/layout
+block title
+    title author DEVELOPMENT TITLE
+block content
+    .section
+        ol.breadcrumb
+            li
+                a(href="index.html") Главная
+            li.active
+                a(href="#") Авторские лоты
+        h1 Лоты Юрия Алексеева
+        .row
+            .col-xs-10
+                p.item-list__author-title #{lorem}
+                include templates/item/item
+                include templates/item/item
+                include templates/item/item
+                include templates/item/item
+                include templates/item/item
+            .col-xs-2
+                include templates/sidebar/sidebar-news
+                include templates/sidebar/sidebar-ad
