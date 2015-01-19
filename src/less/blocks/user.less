@@ -21,12 +21,15 @@
           text-decoration: none;
           &:hover {
             text-decoration: underline;
-            color: #54aa9c;
+            color: @link-h;
+          }
+          &:visited{
+            color: #000000;
           }
         }
         &.active {
           a {
-            color: #54aa9c;
+            color: @link;
             text-decoration: underline;
           }
         }
@@ -72,7 +75,7 @@
         }
       }
       .form-group{
-        margin-bottom: 0px;
+        margin-bottom: 0;
       }
     }
     &-input {
@@ -97,7 +100,7 @@
         left: 50%;
         margin-left: 60px;
         font-style: italic;
-        margin-bottom: 0px;
+        margin-bottom: 0;
       }
     }
     &-adress {
@@ -143,6 +146,15 @@
           color: rgb(63, 185, 135);
           border-color: rgb(63, 185, 135);
         }
+        &:visited{
+          color: #ffffff;
+        }
+        &.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+          color: @link;
+          background-color: #ffffff;
+          border-color: rgb(63, 185, 135);
+          outline: none;
+        }
         &.btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled.focus, .btn-primary[disabled].focus, fieldset[disabled] .btn-primary.focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active {
           background-color: rgb(63, 185, 135);
           border-color: rgb(63, 185, 135);
@@ -168,6 +180,7 @@
           color: rgb(77, 77, 84);
         }
       }
+
     }
   }
   &__bird {

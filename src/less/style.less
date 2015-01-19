@@ -11,7 +11,14 @@
 @import "blocks/user";
 @import "blocks/registration";
 @import "blocks/menu";
+@import "assest/fonts";
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic&subset=latin,cyrillic,cyrillic-ext,latin-ext);
+
+@menu-bg: #f2f2f7;
+@menu-br: #dfdfe6;
+@link-h: #17cfbf;
+@link: #00a698;
+@link-v: #00706c;
 
 body {
   background-color: #f5fffe;
@@ -34,6 +41,7 @@ body {
   }
   &-header {
     padding: 0px 0px;
+    height: 150px;
   }
   &-slider {
     padding: 0px;
@@ -97,7 +105,10 @@ table {
     text-decoration: underline;
     &:hover {
       text-decoration: none;
-      color: #62bfb0;
+      color: @link-h;
+    }
+    &:visited{
+      color: rgb(141, 141, 150)
     }
   }
   > li + li:before {
@@ -109,6 +120,7 @@ table {
   }
   > li + li.active {
     a {
+      color: rgb(141, 141, 150);
       text-decoration: none;
       cursor: default;
       &:hover {
@@ -171,7 +183,7 @@ blockquote {
     left: 0;
     top: 0;
     margin-top: -30px;
-    color: #3aaea0;
+    color: @link;
   }
   &:after {
     position: absolute;
@@ -183,7 +195,7 @@ blockquote {
     right: 0;
     bottom: 0;
     margin-bottom: -20px;
-    color: #3aaea0;
+    color: @link;
   }
   cite {
     position: absolute;
@@ -202,18 +214,32 @@ a {
   font-size: 14px;
   font-family: "Ubuntu";
   font-weight: 300;
-  color: #54aa9c;
+  color: @link;
   text-decoration: underline;
   line-height: 1.5;
   &:hover, &:active {
-    color: #62bfb0;
+    color: @link-h;
+    text-decoration: none;
+  }
+  &:visited{
+    color: @link-v;
     text-decoration: none;
   }
 }
 
 .form-control:focus {
-  border-color: #54aa9c;
+  border-color: @link;
   outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
+  box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
+}
+
+.has-error .form-control:focus{
+  -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
+  box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
+}
+
+.has-success .form-control:focus{
   -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
   box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
 }

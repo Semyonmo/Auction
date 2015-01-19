@@ -11,15 +11,15 @@
     font-size: 14px;
     font-family: "Ubuntu";
     font-weight: 300;
-    color: #54aa9c;
+    color: @link;
     text-decoration: underline;
     line-height: 1.5;
     &:hover, &:active {
-      color: #62bfb0;
+      color: @link-h;
       text-decoration: none;
     }
     &:visited {
-      color: #358279;
+      color: @link-v;
     }
   }
   ul {
@@ -39,7 +39,7 @@
         position: absolute;
         left: -17px;
         top: -13px;
-        color: rgb(58, 174, 160);
+        color: @link;
       }
     }
   }
@@ -59,7 +59,7 @@
         counter-increment: count;
         content: counter(count) ".";
         padding-right: 5px;
-        color: rgb(58, 174, 160);
+        color: @link;
         font-family: "Ubuntu";
         position: absolute;
         left: -17px;

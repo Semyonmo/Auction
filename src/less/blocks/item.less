@@ -59,9 +59,12 @@
       font-family: "Ubuntu";
       font-weight: 300;
       text-decoration: none;
-      color: rgb(84, 170, 156);
+      color: @link;
       &:hover {
-        color: rgb(73, 145, 131);
+        color: @link-h;
+        text-decoration: none;
+      }
+      &:focus{
         text-decoration: none;
       }
     }
@@ -99,9 +102,9 @@
         font-size: 13px;
         font-family: "Ubuntu";
         font-weight: 300;
-        color: #54aa9c;
+        color: @link;
         &:hover {
-          color: #62bfb0;
+          color: @link-h;
         }
       }
     }
@@ -121,9 +124,9 @@
         font-size: 13px;
         font-family: "Ubuntu";
         font-weight: 300;
-        color: #54aa9c;
+        color: @link;
         &:hover {
-          color: #62bfb0;
+          color: @link-h;
         }
       }
     }

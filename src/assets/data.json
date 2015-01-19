@@ -9,12 +9,12 @@
       "href": "#"
     },
     {
-      "text": "Новости",
-      "href": "news-list.html"
-    },
-    {
       "text": "О проекте",
       "href": "#"
+    },
+    {
+      "text": "Новости",
+      "href": "news-list.html"
     }
   ],
   "subMenu": [
@@ -37,12 +37,6 @@
         "text": "Активные",
         "href": "active.html"
       },
-      {
-        "text": "Проданные",
-        "href": "sold.html"
-      }
-    ],
-    [
       {
         "text": "Проданные",
         "href": "sold.html"

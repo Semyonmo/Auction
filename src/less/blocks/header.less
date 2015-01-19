@@ -1,25 +1,21 @@
 .header {
-  h1 {
-    position: relative;
-    margin: 0;
-  }
   a{
     text-decoration: none;
   }
   &__logo {
     position: absolute;
     display: inline-block;
-    width: 375px;
-    height: 57px;
+    width: 400px;
+    height: 112px;
     z-index: 999;
-    top: 33px;
+    top: 20px;
     background: url("../img/baikal-logo.png") no-repeat 0 0;
     margin-left: 42px;
     &-text {
       font-size: 12px;
       font-family: "Ubuntu";
       font-weight: 300;
-      color: rgb(84, 170, 156);
+      color: @link;
       text-transform: uppercase;
       line-height: 1.667;
       text-align: right;
@@ -50,10 +46,10 @@
           font-weight: 300;
           padding: 10px;
           &.active {
-            color: #54aa9c;
+            color: @link;
           }
           &:hover {
-            color: #54aa9c;
+            color: @link;
           }
         }
         &:before {
@@ -74,8 +70,8 @@
       &-wrapper {
         margin-top: 11px;
         text-align: right;
-        margin-bottom: 20px;
-        padding: 0px 42px;
+        margin-bottom: 60px;
+        padding: 0 42px;
       }
     }
     &-wrapper {
@@ -98,7 +94,7 @@
           font-weight: 300;
           padding: 10px;
           &:hover {
-            color: #54aa9c;
+            color: @link-h;
           }
         }
         &:before {
@@ -114,6 +110,12 @@
       }
       &.active {
         display: table;
+      }
+      a{
+        color: #6c6c73;
+        &:visited{
+          color: #6c6c73;
+        }
       }
     }
   }
