@@ -57,9 +57,6 @@ module.exports = {
     }, {
       src: src + '/assets/js/validator.js',
       dest: dest + '/js'
-    }, {
-      src: src + '/js/module/gallery/jquery.photocradle-0.4.3.js',
-      dest: dest + '/js'
     }]
   }
 };

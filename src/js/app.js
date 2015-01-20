@@ -11,73 +11,40 @@ $(document).ready(function () {
      * Init library for lazy load images on suite
      */
     $(function () {
-        $("div.lazy, a.lazy").lazyload({
+        $("div.lazy, a.lazy, img.lazy").lazyload({
             effect: "fadeIn"
         });
     });
 
-
-    $(function(){
-
+    $(function () {
         var options = {
-                firstImageIndex: 5,
-                borderWeight: 4
+            $AutoPlay: false,
+            $SlideDuration: 500,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+            $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+            $UISearchMode: 0,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
+
+            $ThumbnailNavigatorOptions: {
+                $Class: $JssorThumbnailNavigator$,
+                $ChanceToShow: 2,
+
+                $loop: 2,
+                $DisplayPieces: 5,
+                $ParkingPosition: 210,
+                $SpacingX: 2,
+                $SpacingY: 2
             },
+            $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$,
+                $ChanceToShow: 2,
 
-            params = {
-                sources: [
-                    {
-                        thumbnail: '../img/thumbnails/1.jpg',
-                        preview: '../img/previews/1.jpg',
-                        original: '../img/originals/1.jpg',
-                        title: 'Woods troll'
-                    }, {
-                        thumbnail: '../img/thumbnails/2.jpg',
-                        preview: '../img/previews/2.jpg',
-                        original: '../img/originals/2.jpg',
-                        title: 'A frosty tree New Zealand'
-                    }, {
-                        thumbnail: '../img/thumbnails/3.jpg',
-                        preview: '../img/previews/3.jpg',
-                        original: '../img/originals/3.jpg',
-                        title: 'Bloody fog'
-                    }, {
-                        thumbnail: '../img/thumbnails/4.jpg',
-                        preview: '../img/previews/4.jpg',
-                        original: '../img/originals/4.jpg',
-                        title: 'Blue dock'
-                    }, {
-                        thumbnail: '../img/thumbnails/5.jpg',
-                        preview: '../img/previews/5.jpg',
-                        original: '../img/originals/5.jpg',
-                        title: 'Daisy wallpaper'
-                    }, {
-                        thumbnail: '../img/thumbnails/6.jpg',
-                        preview: '../img/previews/6.jpg',
-                        original: '../img/originals/6.jpg',
-                        title: 'Flower'
-                    }, {
-                        thumbnail: '../img/thumbnails/7.jpg',
-                        preview: '../img/previews/7.jpg',
-                        original: '../img/originals/7.jpg',
-                        title: 'Waterdrops on the glass'
-                    }, {
-                        thumbnail: '../img/thumbnails/8.jpg',
-                        preview: '../img/previews/8.jpg',
-                        original: '../img/originals/8.jpg',
-                        title: 'I\'ll follow you'
-                    }, {
-                        thumbnail: '../img/thumbnails/9.jpg',
-                        preview: '../img/previews/9.jpg',
-                        original: '../img/originals/9.jpg',
-                        title: 'Fresh green trees'
-                    }
-                ]
-            };
+                $AutoCenter: 2,                                 //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                $Steps: 6                                       //[Optional] Steps to go for each navigation request, default value is 1
+            }
+        };
 
-        $( '.photocradle' ).photocradle( params, options );
-
+        var jssor_slider1 = new $JssorSlider$('slider1_container', options);
     });
+
 
 
 });
