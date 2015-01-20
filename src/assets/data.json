@@ -2,19 +2,23 @@
   "menu": [
     {
       "text": "Как купить",
-      "href": "#"
+      "href": "#",
+      "disable": false
     },
     {
       "text": "Лоты",
-      "href": "#"
+      "href": "#",
+      "disable": false
     },
     {
       "text": "О проекте",
-      "href": "#"
+      "href": "#",
+      "disable": false
     },
     {
       "text": "Новости",
-      "href": "news-list.html"
+      "href": "news-list.html",
+      "disable": true
     }
   ],
   "subMenu": [

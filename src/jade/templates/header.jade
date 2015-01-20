@@ -31,12 +31,9 @@ header.header
                 .header__menu
                     ul.header__menu-list
                         each item in menu
-                            li.header__menu-list-item
+                            li(class= item.disable ? "disable": "").header__menu-list-item
                                 a(href="#{item.href}").header__menu-list-item-link #{item.text}
                                 ul.header__submenu-list
-                                    //each subItem in item.subMenu
-                                    //    li.header__submenu-list-item
-                                    //        a(href="#{subItem.href}").header__submenu-list-item-link #{subItem.text}
 
             .header__menu-hover
                 each list in subMenu

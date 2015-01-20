@@ -4,30 +4,38 @@ module.exports = menuInit;
 function menuInit() {
     var menu = $('.header__menu-list');
     var hoverMenu = $('.header__menu-hover');
+    var menuItem = $('.header__menu-list-item');
 
-    menu.hover(menuOnHover, menuOnHoverOut);
+    menu.hover(undefined, menuOnHoverOut);
     hoverMenu.hover(menuOnHover, menuOnHoverOut);
 
+    menuItem.hover(function() {
+        hoverMenu.addClass('active');
+
+        if($(this).hasClass('disable')) {
+            hoverMenu.removeClass('active');
+        }
+    });
+
+
     function menuOnHover() {
-        $('.header__menu-hover').addClass('active');
+        hoverMenu.addClass('active');
     }
 
     function menuOnHoverOut() {
-        $('.header__menu-hover').removeClass('active');
+        hoverMenu.removeClass('active');
     }
 
-    $('.header__menu-list-item').hover(menuItemOnHover);
+    menuItem.hover(menuItemOnHover);
 
     function menuItemOnHover() {
         var index = $(this).index();
-        $('.header__menu-list-item').removeClass('active');
+        menuItem.removeClass('active');
 
         $(this).addClass('active');
 
         $('.header__submenu-list',hoverMenu).hide();
         $('.header__submenu-list:eq('+index+')',hoverMenu).show();
     }
-
-
 }
 
