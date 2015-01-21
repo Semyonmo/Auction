@@ -41,7 +41,7 @@
       .full-item__item-info-last-bet-cost 500$
       .full-item__item-info-author-wrapper
          span.full-item__item-info-author-label Автор лота:
-         a.full-item__item-info-author-link Юрий Алексеев
+         a(href="author-lot.html").full-item__item-info-author-link Юрий Алексеев
       p.full-item__item-info-description-text
          | Картина «Якорь» написана на дне Байкала
          | на глубине 30м в районе порта Байкал
@@ -50,13 +50,13 @@
          form
             input(type="text").full-item__form-input
             label.full-item__form-label $
-            input(type="submit" value="Сделать ставку").full-item__form-submit.active
+            input(type="submit" value="Сделать ставку").full-item__form-submit
             .full-item__form-minimal-bet 50 $ – минимальный шаг ставки.
             .full-item__form-alert
                |Вы должны быть авторизованы, чтобы сделать ставку:
-               a  войти
+               a(href="sign-in.html")  войти
                |или
-               a  зарегистрироваться.
+               a(href="registration.html")  зарегистрироваться.
       .full-item__share-wrapper
          .full-item__share-title Поделиться
          //<!-- Go to www.addthis.com / dashboard to customize your tools-- >
@@ -70,3 +70,4 @@
    p Размер 60 x 40 см.
    p Холст подготовленный, масло.
    .full-item__description-photo.lazy(data-original="img/item-photo.png")
+
