@@ -16,12 +16,27 @@
 
 @menu-bg: #f2f2f7;
 @menu-br: #dfdfe6;
+
 @link-h: #17cfbf;
 @link: #00a698;
 @link-v: #00706c;
 
+@main-white: #fff;
+@main-gray: #6c6c73;
+@main-black: #303030;
+@main-gray-h: #00a698;
+@lang-active: #00a698;
+@date-time-color: #8d8d96;
+@breadcrumps: #8d8d96;
+@quotes-color: #209b8e;
+
+@footer-bg: #005956;
+@footer-br: #74aaa3;
+@footer-blue: #00e8d5;
+
 body {
   background-color: #f5fffe;
+  color: @main-black;
 }
 
 .container {
@@ -37,15 +52,16 @@ body {
   padding: 0px 42px 30px 42px;
   background-color: #ffffff;
   &-footer {
-    background-color: #305856;
+    background-color: @footer-bg;
     padding: 25px 42px 25px 42px;
+    border-top: 1px solid @footer-br;
   }
   &-header {
     padding: 0px 0px;
-    height: 150px;
   }
   &-slider {
     padding: 0px;
+
   }
   &-type {
     padding: 15px 42px 0px 42px;
@@ -102,7 +118,7 @@ table {
     font-size: 11px;
     font-family: "Ubuntu";
     font-weight: 300;
-    color: rgb(141, 141, 150);
+    color: @breadcrumps;
     text-decoration: underline;
     &:hover {
       text-decoration: none;
@@ -181,7 +197,7 @@ blockquote {
     left: 0;
     top: 0;
     margin-top: -30px;
-    color: @link;
+    color: @quotes-color;
   }
   &:after {
     position: absolute;
@@ -193,7 +209,7 @@ blockquote {
     right: 0;
     bottom: 0;
     margin-bottom: -20px;
-    color: @link;
+    color: @quotes-color;
   }
   cite {
     position: absolute;

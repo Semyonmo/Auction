@@ -19,10 +19,9 @@
       right: 15px;
       overflow: hidden;
       transition: height .5s ease-out;
-
       &.active {
         height: 38px;
-        border-bottom: 1px solid rgb(233, 233, 240);
+        border-bottom: 1px solid @menu-br;
       }
     }
     &-list {
@@ -39,14 +38,14 @@
           font-size: 16px;
           font-family: "Ubuntu";
           font-weight: 300;
-          color: rgb(48, 48, 48);
+          color: @main-black;
           font-variant: small-caps;
           line-height: 1.25;
           padding: 0 20px 23px 20px;
           &:hover, &:active, &:focus {
             transition: 400ms;
             text-decoration: none;
-            color: rgb(48, 48, 48);
+            color: @main-black;
           }
           &:before {
 //            position: absolute;
@@ -94,7 +93,7 @@
             transition: 200ms;
             height: 38px;
             z-index: 999;
-            border-bottom: 1px solid rgb(233, 233, 240);
+            border-bottom: 1px solid @menu-br;
           }
           .header__menu-list-item-link:before, .header__menu-list-item-link:after {
             display: inline-block;
@@ -135,10 +134,10 @@
           font-size: 12px;
           font-family: "Ubuntu";
           font-weight: 300;
-          color: rgb(108, 108, 115);
+          color: @main-gray;
           text-transform: uppercase;
           &:hover {
-            color: rgb(48, 48, 48);
+            color: @main-black;
             text-decoration: none;
           }
           &:last-child {

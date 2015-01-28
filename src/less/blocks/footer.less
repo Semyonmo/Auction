@@ -1,25 +1,8 @@
 .footer {
-  a {
-    text-decoration: none;
-    color: #ffffff;
-    &:visited{
-      color: #ffffff;
-      text-decoration: none;
-    }
-  }
   font-family: "Ubuntu";
   font-weight: 300;
   &__menu {
     &-wrapper {
-      a {
-        color: #e2ebea;
-        text-decoration: none;
-        font-size: 12px;
-        &:hover, &:active {
-          color: @link-h;
-          text-decoration: underline;
-        }
-      }
       margin-bottom: 75px;
     }
     &-title {
@@ -40,7 +23,13 @@
         text-transform: uppercase;
         margin-right: -10px;
         &-link {
-          cursor: pointer;
+          color: #e2ebea;
+          text-decoration: none;
+          font-size: 12px;
+          &:hover{
+            color: @footer-blue;
+            text-decoration: none;
+          }
         }
       }
     }
@@ -54,7 +43,7 @@
         margin-bottom: 14px;
       }
       &-code {
-        color: @link;
+        color: @footer-blue;
         font-size: 13px;
       }
       &-link {
@@ -62,8 +51,10 @@
         margin-left: 5px;
         color: #e2ebea;
         font-size: 16px;
-        &:hover {
-          color: @link-h;
+        text-decoration: none;
+        &:hover,&:focus {
+          color: @footer-blue;
+          text-decoration: none;
         }
       }
     }
@@ -74,10 +65,11 @@
         font-size: 13px;
         border-bottom: 1px dotted #e1eae9;
         line-height: 14px;
+        text-decoration: none;
         &:hover {
-          color: @link-h;
-          border-bottom: 1px dotted transparent;
+          color: @footer-blue;
           text-decoration: none;
+          border-bottom: 1px dotted @footer-blue;
         }
       }
     }
@@ -94,8 +86,9 @@
       display: inline-block;
       color: #e2ebea;
       font-size: 12px;
+      text-decoration: none;
       &:hover, &:active, &:focus {
-        color: @link-h;
+        color: @footer-blue;
         text-decoration: none;
         .footer__developer-logo {
           background-position: -80px 0;

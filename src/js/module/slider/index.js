@@ -32,47 +32,90 @@ function sliderInit() {
 
             $scope.slides = [
                 {
-                    title: 'Сдаем отчетность 1!',
-                    text: 'Сезон летних отпусков в разгаре. А между тем самое время готовиться к сдаче отчетности за 1-е полугодие! Уйти в отпуск налегке и сдать отчетность без ошибок Вам помогут вее время готовиться к сдаче отчетности за 1-е полугодие! Уйти в отпуск налегке и сдать отчетность без ошибок Вам помогут вебинары:',
-                    btn: 'Присоеденится',
-                    img: '/img/gallery/image-1.png',
+                    title: 'Создано Байкалом',
+                    text: 'О нашем проекте',
+                    btn: 'Подробнее',
+                    img: '/img/originals/1.jpg',
                     color: {'background-color': '#12c599'},
                     imgBanner: {
-                        'background': 'url(http://ic-iskra.ru/uploads/banner/img/6e7cd2dd73722d788a000000/%D0%9C%D0%A4%D0%A1%D0%9E-44.jpg) no-repeat',
+                        'background': 'url(/img/originals/1.jpg) no-repeat',
                         'background-size': 'cover'
                     },
-                    prev: 'Мастер-класс "Актуальные вопросы оплаты труда 2014 года. Изменения в законодательстве 1'
+                    prev: 'Мастер-класс льстве 1'
                 },
                 {
                     title: 'Сдаем отчетность 2!',
                     text: 'Сезон летних не отпусков в разгаре. А между тем самое время готовиться к сдаче отчетности за 1-е полугодие! Уйтовиться к сдаче отчетности за 1-е полугодие! Уйти в отпуск налегке и сдать отчетность без ошибок Вам помогут вебинары:',
-                    btn: 'Не присоеденится',
+                    btn: 'Подробнее',
                     //этот адресс нужен для того чтобы картинка была пустой
                     img: '/img/gallery/handtinytrans.gif',
                     color: {'background-color': '#FFA86C'},
                     imgBanner: {
-                        'background': 'url(http://ic-iskra.ru/uploads/banner/img/6e7cd2dd73722d788a000000/%D0%9C%D0%A4%D0%A1%D0%9E-44.jpg) no-repeat',
+                        'background': 'url(/img/originals/3.jpg) no-repeat',
                         'background-size': 'cover'
                     },
-                    prev: 'Мастер-класс "Актуальные вопросы оплаты труда 2015 года. Изменения в законодательстве 2'
+                    prev: 'Мастер-класс "Акьстве 2'
                 },
                 {
                     title: 'Сдаем отчетность 3!',
-                    text: 'Сезон летних не отпусков в разгаре. А между тем самое время г в отпуск налегке и сдать отчетность без ошибок Вам помогут вебинары:',
-                    btn: 'Не присоеденится',
-                    img: '/img/gallery/image-1.png',
+                    text: 'Сезон летних не отпусковалегке и сдать отчетность без ошибок Вам помогут вебинары:',
+                    btn: 'Подробнее',
+                    img: '/img/originals/2.jpg',
                     color: {'background-color': '#12c599'},
-                    imgBanner: '',
-                    prev: 'Мастер-класс "Актуальные вопросы оплаты труда 2015 года. Изменения в законодательстве 3'
+                    imgBanner: {
+                        'background': 'url(/img/originals/2.jpg) no-repeat',
+                        'background-size': 'cover'
+                    },
+                    prev: 'Мастер-класс аконодательстве 3'
                 },
                 {
                     title: 'Сдаем отчетность 4!',
-                    text: 'Сезон летних не отпусков в разгаре. А между тем самое время готовиться к сдаче отчетности за 1-е полуя готовиться к сдаче отчетности за 1-е полуя готовиться к сдаче отчетности за 1-е полуя готовиться к сдаче отчетности за 1-е полуя готовиться к сдаче отчетности за 1-е полуя готовиться к сдаче отчетности за 1-е полуя готовиться к сдаче отчетности за 1-е полуя готовиться к сдаче отчетности за 1-е полугодие! Уйти в отпуск налегке и сдать отчетность без ошибок Вам помогут вебинары:',
-                    btn: 'Не присоеденится',
+                    text: 'Сезон леемя готовиться к овза 1-е полугодиеть отчетнобинары:',
+                    btn: 'Подробнее',
                     color: {'background-color': '#3F96FF'},
-                    img: '/img/gallery/image-1.png',
-                    imgBanner: '',
-                    prev: 'Мастер-класс "Актуальные вопросы оплаты труда 2015 года. Изменения в законодательстве 4'
+                    img: '/img/originals/4.jpg',
+                    imgBanner: {
+                        'background': 'url(/img/originals/4.jpg) no-repeat',
+                        'background-size': 'cover'
+                    },
+                    prev: 'Мастер-класс  законодательстве 4'
+                },
+                {
+                    title: 'Сдаем отчетность 4!',
+                    text: 'Сезон леемя готовиться к овза 1-е полугодиеть отчетнобинары:',
+                    btn: 'Подробнее',
+                    color: {'background-color': '#3F96FF'},
+                    img: '/img/originals/4.jpg',
+                    imgBanner: {
+                        'background': 'url(/img/originals/4.jpg) no-repeat',
+                        'background-size': 'cover'
+                    },
+                    prev: 'Мастер-класс  законодательстве 4'
+                },
+                {
+                    title: 'Сдаем отчетность 4!',
+                    text: 'Сезон леемя готовиться к овза 1-е полугодиеть отчетнобинары:',
+                    btn: 'Подробнее',
+                    color: {'background-color': '#3F96FF'},
+                    img: '/img/originals/4.jpg',
+                    imgBanner: {
+                        'background': 'url(/img/originals/4.jpg) no-repeat',
+                        'background-size': 'cover'
+                    },
+                    prev: 'Мастер-класс  законодательстве 4',
+                    href: 'kartina-yakor.html'
+                },
+                {
+                    title: 'Сдаем отчетность 4!',
+                    text: 'Сезон леемя готовиться к овза 1-е полугодиеть отчетнобинары:',
+                    btn: 'Подробнее',
+                    color: {'background-color': '#3F96FF'},
+                    img: '/img/originals/4.jpg',
+                    imgBanner: {
+                        'background': 'url(/img/originals/4.jpg) no-repeat',
+                        'background-size': 'cover'
+                    },
+                    prev: 'Мастер-класс  законодательстве 4'
                 }
             ];
 
@@ -80,7 +123,7 @@ function sliderInit() {
 
             $scope.$watch('slideIndex', function (value) {
                 $timeout.cancel(timeout);
-                $('.gallery-slide .row').animate({opacity: 0}, 300);
+                $('.gallery-slide .row').animate({opacity: 0.5}, 300);
                 timeout = $timeout(function () {
                     $('.gallery-slide .row').animate({opacity: 1}, 100);
                     $scope.slide = $scope.slides[value];

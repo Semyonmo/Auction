@@ -1,5 +1,42 @@
 .row
-   .col-xs-12
-      .slider__wrapper
-         include slider.html
+    .col-xs-12
+        section(ng-app="app" ng-controller="GalleryCtrl")
+            .gallery(ng-style="slide.color")
+                .gallery-slide(ng-style="slide.imgBanner" style="")
+                    .slide-container
+                        .row
+                            .slider__left-col-transparent
+                            .col-xs-4.slide-col.left-col
 
+                                .slide-wrapper.slide-wrapper-img.slider__left-col
+                                    .slide
+                                        h2.gallery-t-title {{slide.title}}
+                                        p.gallery-t-text {{slide.text}}
+                                        a.btn.btn-default.gallery-t-btn {{slide.btn}}
+                            .slider__nav-transparent
+                            .col-xs-8.slider__nav-wrapper
+                                section.gallery-navbar
+                                    .row
+                                        .col-xs-5.gallery-navbar-col
+                                            .navbar-wrapper
+                                                .navbar
+                                                    .navbar-body
+                                                        .gallery-navbar-prev(ng-click="prevSlide()")
+                                                            .slider__nav-prev-wrapper
+                                                                img.gallery-navbar-arrow-prev(src="/img/slider/arrow-prev.png")
+                                                            .gallery-navbar-prev-text {{prev}}
+                                        .col-xs-2
+                                            .gallery-navbar-col.slider__nav-circle-wrapper
+                                                .navbar-wrapper.gallery-navbar-circle-list-wrapper
+                                                    .navbar
+                                                        .navbar-body
+                                                            ul.gallery-navbar-circle-list
+                                                                li.gallery-navbar-circle-list-circle-item(ng-click="showSlide($index)" ng-repeat="slide in slides")
+                                        .col-xs-5.gallery-navbar-col
+                                            .navbar-wrapper.slider__navbar-next-wrapper
+                                                .navbar
+                                                    .navbar-body
+                                                        .gallery-navbar-next(ng-click="nextSlide()")
+                                                            .gallery-navbar-next-text {{next}}
+                                                            .slider__nav-next-wrapper
+                                                                img.gallery-navbar-arrow-next(src="/img/slider/arrow-next.png")
