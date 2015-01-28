@@ -36,7 +36,6 @@ function sliderInit() {
                     text: 'О нашем проекте',
                     btn: 'Подробнее',
                     img: '/img/originals/1.jpg',
-                    color: {'background-color': '#12c599'},
                     imgBanner: {
                         'background': 'url(/img/originals/1.jpg) no-repeat',
                         'background-size': 'cover'
@@ -49,7 +48,6 @@ function sliderInit() {
                     btn: 'Подробнее',
                     //этот адресс нужен для того чтобы картинка была пустой
                     img: '/img/gallery/handtinytrans.gif',
-                    color: {'background-color': '#FFA86C'},
                     imgBanner: {
                         'background': 'url(/img/originals/3.jpg) no-repeat',
                         'background-size': 'cover'
@@ -61,7 +59,6 @@ function sliderInit() {
                     text: 'Сезон летних не отпусковалегке и сдать отчетность без ошибок Вам помогут вебинары:',
                     btn: 'Подробнее',
                     img: '/img/originals/2.jpg',
-                    color: {'background-color': '#12c599'},
                     imgBanner: {
                         'background': 'url(/img/originals/2.jpg) no-repeat',
                         'background-size': 'cover'
@@ -72,44 +69,6 @@ function sliderInit() {
                     title: 'Сдаем отчетность 4!',
                     text: 'Сезон леемя готовиться к овза 1-е полугодиеть отчетнобинары:',
                     btn: 'Подробнее',
-                    color: {'background-color': '#3F96FF'},
-                    img: '/img/originals/4.jpg',
-                    imgBanner: {
-                        'background': 'url(/img/originals/4.jpg) no-repeat',
-                        'background-size': 'cover'
-                    },
-                    prev: 'Мастер-класс  законодательстве 4'
-                },
-                {
-                    title: 'Сдаем отчетность 4!',
-                    text: 'Сезон леемя готовиться к овза 1-е полугодиеть отчетнобинары:',
-                    btn: 'Подробнее',
-                    color: {'background-color': '#3F96FF'},
-                    img: '/img/originals/4.jpg',
-                    imgBanner: {
-                        'background': 'url(/img/originals/4.jpg) no-repeat',
-                        'background-size': 'cover'
-                    },
-                    prev: 'Мастер-класс  законодательстве 4'
-                },
-                {
-                    title: 'Сдаем отчетность 4!',
-                    text: 'Сезон леемя готовиться к овза 1-е полугодиеть отчетнобинары:',
-                    btn: 'Подробнее',
-                    color: {'background-color': '#3F96FF'},
-                    img: '/img/originals/4.jpg',
-                    imgBanner: {
-                        'background': 'url(/img/originals/4.jpg) no-repeat',
-                        'background-size': 'cover'
-                    },
-                    prev: 'Мастер-класс  законодательстве 4',
-                    href: 'kartina-yakor.html'
-                },
-                {
-                    title: 'Сдаем отчетность 4!',
-                    text: 'Сезон леемя готовиться к овза 1-е полугодиеть отчетнобинары:',
-                    btn: 'Подробнее',
-                    color: {'background-color': '#3F96FF'},
                     img: '/img/originals/4.jpg',
                     imgBanner: {
                         'background': 'url(/img/originals/4.jpg) no-repeat',
@@ -123,13 +82,13 @@ function sliderInit() {
 
             $scope.$watch('slideIndex', function (value) {
                 $timeout.cancel(timeout);
-                $('.gallery-slide .row').animate({opacity: 0.5}, 300);
+                //$('.gallery-slide .row').animate({opacity: 0.5}, 300);
                 timeout = $timeout(function () {
-                    $('.gallery-slide .row').animate({opacity: 1}, 100);
+                    //$('.gallery-slide .row').animate({opacity: 1}, 100);
                     $scope.slide = $scope.slides[value];
                     setPrev(value);
                     slide();
-                }, 300);
+                }, 0);
 
                 $('.gallery-navbar-circle-list-circle-item').removeClass('active');
                 $($('.gallery-navbar-circle-list-circle-item').get($scope.slideIndex)).addClass('active');
