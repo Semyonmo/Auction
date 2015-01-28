@@ -10,3 +10,146 @@
 
   }
 }
+
+
+@bg-color: #12c599;
+@btn-color: #013b51;
+
+.slide-col {
+  height: 450px;
+}
+
+.slide-wrapper {
+  display: table;
+  height: 100%;
+  float: right;
+  .slide {
+    display: table-cell;
+    vertical-align: middle;
+    .slide-body {
+
+    }
+  }
+}
+
+.navbar-wrapper {
+  display: table;
+  height: 100%;
+  float: right;
+  .navbar {
+    display: table-cell;
+    vertical-align: middle;
+    .navbar-body {
+
+    }
+  }
+}
+
+.slide-wrapper-img {
+  float: none;
+  margin: 0 auto;
+}
+
+.gallery-slide {
+
+}
+
+.gallery {
+  background-color: @bg-color;
+  border-bottom: 1px solid #ffffff;
+  &-t-title {
+    color: #fff; // text color
+    font-family: "PT Sans", sans-serif;
+    font-size: 38px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+  &-t-text {
+    color: #fff; // text color
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  &-t-btn {
+    border-radius: 10px;// border radius
+    color: @btn-color; // text color
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    background: none;
+    border: 1px solid @btn-color;
+    padding: 12px 20px;
+    &:hover, &:focus {
+      background: none;
+      border: 1px solid @btn-color;
+    }
+  }
+  &-body {
+
+  }
+  .img {
+    visibility: hidden;
+  }
+}
+
+.gallery {
+  &-navbar {
+    border-top: 1px solid #ffffff;
+    position: relative;
+    &-col {
+      height: 55px;
+      border-left: 1px solid #ffffff;
+    }
+    &-next, &-prev {
+      display: inline-block;
+      height: 100%;
+      color: #fff; // text color
+      font-family: "PT Sans", sans-serif;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    &-circle-list-wrapper {
+      float: none;
+      margin: 0 auto;
+    }
+    &-circle-list {
+      list-style: none;
+      margin-bottom: 0px;
+      padding-left: 0px;
+
+      &-circle-item {
+        display: inline-block;
+        margin-left: 10px;
+        border-radius: 99px; // border radius
+        height: 18px;
+        width: 18px;
+        background-color: rgba(255,255,255,.5);
+        &.active {
+          //          background-color: @bg-color; // layer fill content
+          border: 2px solid #ffffff;
+        }
+        &:first-child {
+          margin-left: 0px;
+        }
+      }
+    }
+    &-arrow-next, &-arrow-prev {
+      position: absolute;
+    }
+    &-arrow-next {
+      top: 12px;
+      right: 10px;
+    }
+    &-arrow-prev {
+      top: 12px;
+      left: 10px;
+    }
+    &-next-text {
+      padding-right: 67px;
+    }
+    &-prev-text {
+      padding-left: 67px;
+    }
+  }
+}

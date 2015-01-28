@@ -3,24 +3,23 @@ var gallery = require('./module/gallery');
 var slider = require('./module/slider');
 var imagesLazyLoad = require('./module/images');
 
-$(document).ready(function () {
-    /**
-     * Load menu
-     */
-    menu();
 
-    /**
-     * Init library for lazy load images on suite
-     */
-    imagesLazyLoad();
+/**
+ * Load menu
+ */
+menu();
 
-    /**
-     * Load gallery on lot page
-     */
-    gallery();
+/**
+ * Init library for lazy load images on suite
+ */
+imagesLazyLoad();
 
-    /**
-     * Load slider on index page
-     */
-    slider();
-});
+/**
+ * Load slider on index page
+ */
+slider();
+
+/**
+ * Load gallery on lot page
+ */
+gallery();

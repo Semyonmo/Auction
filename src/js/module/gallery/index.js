@@ -26,5 +26,7 @@ function galleryInit() {
         }
     };
 
-    var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+    if($('#slider1_container').length) {
+        $JssorSlider$('slider1_container', options);
+    }
 }

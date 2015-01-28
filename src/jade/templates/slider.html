@@ -1,0 +1,79 @@
+<section ng-app="app" ng-controller="GalleryCtrl">
+    <div class="gallery" ng-style="slide.color">
+        <section class="gallery-slide" ng-style="slide.imgBanner" style="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6 slide-col">
+                        <div class="slide-wrapper slide-wrapper-img">
+                            <div class="slide">
+                                <h2 class="gallery-t-title">{{slide.title}}</h2>
+
+                                <p class="gallery-t-text">{{slide.text}}</p>
+                                <a href="#" class="btn btn-default gallery-t-btn">{{slide.btn}}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 slide-col">
+                        <div class="slide-wrapper slide-wrapper-img">
+                            <div class="slide">
+                                <img class="slideLeft img" ng-src="{{slide.img}}" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="gallery-navbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-5 gallery-navbar-col">
+                        <div class="navbar-wrapper">
+                            <div class="navbar">
+                                <div class="navbar-body">
+                                    <div ng-click="prevSlide()" class="gallery-navbar-prev">
+                                        <img  class="gallery-navbar-arrow-prev"
+                                              src="/img/gallery/arrow-prev.png" alt=""/>
+
+                                        <div class="gallery-navbar-prev-text">
+                                            {{prev}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-2 gallery-navbar-col">
+                        <div class="navbar-wrapper gallery-navbar-circle-list-wrapper">
+                            <div class="navbar">
+                                <div class="navbar-body">
+                                    <ul class="gallery-navbar-circle-list">
+                                        <li ng-click="showSlide($index)"
+                                            class="gallery-navbar-circle-list-circle-item"
+                                            ng-repeat="slide in slides">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-5 gallery-navbar-col">
+                        <div class="navbar-wrapper">
+                            <div class="navbar">
+                                <div class="navbar-body">
+                                    <div ng-click="nextSlide()" class="gallery-navbar-next">
+                                        <div class="gallery-navbar-next-text">
+                                            {{next}}
+                                        </div>
+                                        <img  class="gallery-navbar-arrow-next"
+                                              src="/img/gallery/arrow-next.png"
+                                              alt=""/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
