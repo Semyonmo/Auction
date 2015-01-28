@@ -173,6 +173,10 @@
       color: rgb(48, 48, 48);
     }
     &-submit {
+      button, html input[type=submit] {
+        -webkit-appearance: button;
+        cursor: default;
+      }
       display: block;
       border-radius: 2px;
       background-color: rgb(206, 206, 217);
@@ -184,6 +188,7 @@
       text-transform: uppercase;
       padding: 6px 12px;
       margin-bottom: 10px;
+      cursor: default;
       &:focus {
         outline: none;
       }
@@ -200,6 +205,45 @@
           background-color: #ffffff;
           color: rgb(77, 77, 84);
           transition: 400ms;
+        }
+        &.btn,&.btn-primary{
+          cursor: pointer;
+          &:hover{
+            background-color: #ffffff;
+            color: rgb(77, 77, 84);
+            transition: 400ms;
+            border-color: rgb(77, 77, 84);
+            -webkit-box-shadow: inset 0 3px 5px rgba(255,255,255,1);
+            box-shadow: inset 0 3px 5px rgba(255,255,255,1);
+          }
+          &:focus{
+            background-color: #ffffff;
+            color: rgb(77, 77, 84);
+            transition: 400ms;
+            border-color: rgb(77, 77, 84);
+            -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+            box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+          }
+        }
+      }
+      &.btn,&.btn-primary{
+        cursor: default;
+        &:hover{
+          background-color: rgb(206, 206, 217);
+          border: 2px solid rgb(206, 206, 217);
+          font-size: 13px;
+          font-family: "Ubuntu";
+          font-weight: 300;
+          color: rgb(255, 255, 255);
+        }
+        &:focus{
+          background-color: rgb(206, 206, 217);
+          border: 2px solid rgb(206, 206, 217);
+          font-size: 13px;
+          font-family: "Ubuntu";
+          font-weight: 300;
+          color: rgb(255, 255, 255);
+          outline: none;
         }
       }
     }

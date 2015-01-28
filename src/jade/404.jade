@@ -1,0 +1,22 @@
+extends templates/layout
+
+block title
+   title 404 DEVELOPMENT TITLE
+
+block content
+   .section
+      h1 Страница не найдена
+      .row
+         .col-xs-10
+            p К сожалению, запрашиваемой вами страницы не существует. Предлагаем посетить другие разделы сайта:
+            div
+               a(href="user.html") Личный кабинет
+            div
+               a(href="#") Правила аукциона
+            div
+               a(href="news-list.html") Новости
+            div
+               a(href="#") Контакты
+         .col-xs-2
+            include templates/sidebar/sidebar-news
+            include templates/sidebar/sidebar-ad
