@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Создано Байкалом",
+    "text": "О нашем проекте",
+    "btn": "Подробнее",
+    "img": "/img/originals/1.jpg",
+    "imgBanner": {
+      "background": "url(/img/originals/1.jpg) no-repeat",
+      "background-size": "cover"
+    },
+    "prev": "Мастер-класс льстве 1"
+  },
+  {
+    "title": "Создано Байкалом",
+    "text": "О нашем проекте",
+    "btn": "Подробнее",
+    "img": "/img/originals/2.jpg",
+    "imgBanner": {
+      "background": "url(/img/originals/1.jpg) no-repeat",
+      "background-size": "cover"
+    },
+    "prev": "Мастер-класс льстве 2"
+  },
+  {
+    "title": "Создано Байкалом",
+    "text": "О нашем проекте",
+    "btn": "Подробнее",
+    "img": "/img/originals/3.jpg",
+    "imgBanner": {
+      "background": "url(/img/originals/1.jpg) no-repeat",
+      "background-size": "cover"
+    },
+    "prev": "Мастер-класс льстве 3"
+  },
+  {
+    "title": "Создано Байкалом",
+    "text": "О нашем проекте",
+    "btn": "Подробнее",
+    "img": "/img/originals/4.jpg",
+    "imgBanner": {
+      "background": "url(/img/originals/1.jpg) no-repeat",
+      "background-size": "cover"
+    },
+    "prev": "Мастер-класс льстве 4"
+  }
+]

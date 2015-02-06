@@ -3,12 +3,38 @@ module.exports = sliderInit;
 function sliderInit() {
     angular
         .module('app', [])
-        .controller('GalleryCtrl', function ($scope, $timeout) {
+        .controller('GalleryCtrl', function ($scope, $timeout, $http) {
             var timeout = {};
             $scope.slide = {};
             $scope.slideIndex = 0;
             $scope.prev = '';
             $scope.next = '';
+
+            (function dataLoad() {
+                //$http.get('https://api.myjson.com/bins/1jpp3').success(function(data) {
+                $http.get('/main/sliderdata').success(function(data) {
+                    $scope.slides = data;
+                    $scope.slide = $scope.slides[$scope.slideIndex];
+
+
+                    $scope.$watch('slideIndex', function (value) {
+                        $timeout.cancel(timeout);
+                        //$('.gallery-slide .row').animate({opacity: 0.5}, 300);
+                        timeout = $timeout(function () {
+                            //$('.gallery-slide .row').animate({opacity: 1}, 100);
+                            $scope.slide = $scope.slides[value];
+                            setPrev(value);
+                            slide();
+                        }, 0);
+
+                        $('.gallery-navbar-circle-list-circle-item').removeClass('active');
+                        $($('.gallery-navbar-circle-list-circle-item').get($scope.slideIndex)).addClass('active');
+                    });
+                }).error(function(data) {
+                    console.log(data);
+                });
+            })();
+
 
             $scope.nextSlide = function () {
                 if ($scope.slideIndex > $scope.slides.length - 2) {
@@ -29,70 +55,6 @@ function sliderInit() {
             $scope.showSlide = function (index) {
                 $scope.slideIndex = index;
             };
-
-            $scope.slides = [
-                {
-                    title: 'Создано Байкалом',
-                    text: 'О нашем проекте',
-                    btn: 'Подробнее',
-                    img: '/img/originals/1.jpg',
-                    imgBanner: {
-                        'background': 'url(/img/originals/1.jpg) no-repeat',
-                        'background-size': 'cover'
-                    },
-                    prev: 'Мастер-класс льстве 1'
-                },
-                {
-                    title: 'Сдаем отчетность 2!',
-                    text: 'Сезон летних не отпусков в разгаре. А между тем самое время готовиться к сдаче отчетности за 1-е полугодие! Уйтовиться к сдаче отчетности за 1-е полугодие! Уйти в отпуск налегке и сдать отчетность без ошибок Вам помогут вебинары:',
-                    btn: 'Подробнее',
-                    //этот адресс нужен для того чтобы картинка была пустой
-                    img: '/img/gallery/handtinytrans.gif',
-                    imgBanner: {
-                        'background': 'url(/img/originals/3.jpg) no-repeat',
-                        'background-size': 'cover'
-                    },
-                    prev: 'Мастер-класс "Акьстве 2'
-                },
-                {
-                    title: 'Сдаем отчетность 3!',
-                    text: 'Сезон летних не отпусковалегке и сдать отчетность без ошибок Вам помогут вебинары:',
-                    btn: 'Подробнее',
-                    img: '/img/originals/2.jpg',
-                    imgBanner: {
-                        'background': 'url(/img/originals/2.jpg) no-repeat',
-                        'background-size': 'cover'
-                    },
-                    prev: 'Мастер-класс аконодательстве 3'
-                },
-                {
-                    title: 'Сдаем отчетность 4!',
-                    text: 'Сезон леемя готовиться к овза 1-е полугодиеть отчетнобинары:',
-                    btn: 'Подробнее',
-                    img: '/img/originals/4.jpg',
-                    imgBanner: {
-                        'background': 'url(/img/originals/4.jpg) no-repeat',
-                        'background-size': 'cover'
-                    },
-                    prev: 'Мастер-класс  законодательстве 4'
-                }
-            ];
-
-            $scope.slide = $scope.slides[$scope.slideIndex];
-
-            $scope.$watch('slideIndex', function (value) {
-                $timeout.cancel(timeout);
-                //$('.gallery-slide .row').animate({opacity: 0.5}, 300);
-                timeout = $timeout(function () {
-                    //$('.gallery-slide .row').animate({opacity: 1}, 100);
-                    $scope.slide = $scope.slides[value];
-                    setPrev(value);
-                    slide();
-                }, 0);
-
-                $('.gallery-navbar-circle-list-circle-item').removeClass('active');
-                $($('.gallery-navbar-circle-list-circle-item').get($scope.slideIndex)).addClass('active');
-            });
 
             function setPrev(value) {
                 if ($scope.slides[value - 1] === undefined) {
