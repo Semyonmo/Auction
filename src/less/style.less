@@ -32,7 +32,6 @@
 @quotes-color: #209b8e;
 @pagination: #c9c9d1;
 
-
 @footer-bg: #005956;
 @footer-br: #74aaa3;
 @footer-blue: #00e8d5;
@@ -247,15 +246,16 @@ a {
   box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
 }
 
-.has-error .form-control:focus{
+.has-error .form-control:focus {
   -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
   box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
 }
 
-.has-success .form-control:focus{
+.has-success .form-control:focus {
   -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
   box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
 }
+
 /* jssor slider thumbnail navigator skin 07 css */
 /*
 .jssort07 .p            (normal)
@@ -281,7 +281,7 @@ a {
   outline: solid @link-h;
 }
 
-.jssort07 .pav .i, .jssort07 .pdn .i{
+.jssort07 .pav .i, .jssort07 .pdn .i {
   outline: solid @link-h;
   opacity: 1;
 }
@@ -318,4 +318,19 @@ a {
   -moz-transition: none;
   -webkit-transition: none;
   -o-transition: none;
+}
+
+.custom {
+  top: 0px;
+  bottom: 0;
+  left: 0px;
+  transform: perspective(1px);
+  position: absolute;
+  right: 0;
+  margin: auto;
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto !important;
+  height: auto !important;
 }
