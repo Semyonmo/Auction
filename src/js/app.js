@@ -3,6 +3,8 @@ var gallery = require('./module/gallery');
 var slider = require('./module/slider');
 var imagesLazyLoad = require('./module/images');
 
+require('swiper');
+
 
 /**
  * Load menu
@@ -23,3 +25,4 @@ slider();
  * Load gallery on lot page
  */
 gallery();
+
