@@ -1,58 +1,62 @@
 .full-item__time-wrapper До окончания торгов
-   span.full-item__time 5 д 20:34:15
+	span.full-item__time 5 д 20:34:15
+
+	a(class="image-popup-no-margins", href="http://farm4.staticflickr.com/3721/9207329484_ba28755ec4_o.jpg")
+
+
 .full-item__item-wrapper
-   .full-item__item-gallery-wrapper
-      .swiper-container.gallery-top
-         .swiper-wrapper
-            each item in [1,2,3,4,5,6]
-               .swiper-slide(style='background-image:url(/img/originals/#{item}.jpg)')
+	.full-item__item-gallery-wrapper
+		.swiper-container.gallery-top
+			.swiper-wrapper
+				each item in [1,2,3,4,5,6]
+					a.swiper-slide.image-popup-no-margins(style='background-image:url(/img/originals/#{item}.jpg)', href="/img/originals/#{item}.jpg")
+						img(src="/img/originals/#{item}.jpg", width="380", height="370")
 
-         // Add Arrows
-         .swiper-button-next.swiper-button-white
-         .swiper-button-prev.swiper-button-white
-      .swiper-container.gallery-thumbs
-         .swiper-wrapper
-            each item in [1,2,3,4,5,6]
-               .swiper-slide(style='background-image:url(/img/originals/#{item}.jpg)')
+			// Add Arrows
+			.swiper-button-next.swiper-button-white
+			.swiper-button-prev.swiper-button-white
+		.swiper-container.gallery-thumbs
+			.swiper-wrapper
+				each item in [1,2,3,4,5,6]
+					a.swiper-slide(style='background-image:url(/img/originals/#{item}.jpg)')
+
+	//img.custom(src="img/originals/1.jpg" u="image")
 
 
-   //img.custom(src="img/originals/1.jpg" u="image")
-
-
-   .full-item__item-info-wrapper
-      .full-item__item-info-last-bet-wrapper
-         .full-item__item-info-last-bet-label последняя ставка
-            a(href="bet-history.html").full-item__item-info-history Смотреть историю ставок
-      .full-item__item-info-last-bet-cost 500$
-      .full-item__item-info-author-wrapper
-         span.full-item__item-info-author-label Автор лота:
-         a(href="author-lot.html").full-item__item-info-author-link Юрий Алексеев
-      p.full-item__item-info-description-text
-         | Картина «Якорь» написана на дне Байкала
-         | на глубине 30м в районе порта Байкал
-         | (Иркутская обл., западный берег оз. Байкал) 15 июля 2014 года.
-      .full-item__form-wrapper
-         form
-            input(type="text").full-item__form-input
-            label.full-item__form-label $
-            input(type="submit" value="Сделать ставку").full-item__form-submit.btn.btn-primary.active
-            .full-item__form-minimal-bet 50 $ – минимальный шаг ставки.
-            .full-item__form-alert
-               |Вы должны быть авторизованы, чтобы сделать ставку:
-               a(href="sign-in.html")  войти
-               |или
-               a(href="registration.html")  зарегистрироваться.
-      .full-item__share-wrapper
-         .full-item__share-title Поделиться
-         //<!-- Go to www.addthis.com / dashboard to customize your tools-- >
-         .addthis_sharing_toolbox
+	.full-item__item-info-wrapper
+		.full-item__item-info-last-bet-wrapper
+			.full-item__item-info-last-bet-label последняя ставка
+				a(href="bet-history.html").full-item__item-info-history Смотреть историю ставок
+		.full-item__item-info-last-bet-cost 500$
+		.full-item__item-info-author-wrapper
+			span.full-item__item-info-author-label Автор лота:
+			a(href="author-lot.html").full-item__item-info-author-link Юрий Алексеев
+		p.full-item__item-info-description-text
+			| Картина «Якорь» написана на дне Байкала
+			| на глубине 30м в районе порта Байкал
+			| (Иркутская обл., западный берег оз. Байкал) 15 июля 2014 года.
+		.full-item__form-wrapper
+			form
+				input(type="text").full-item__form-input
+				label.full-item__form-label $
+				input(type="submit" value="Сделать ставку").full-item__form-submit.btn.btn-primary.active
+				.full-item__form-minimal-bet 50 $ – минимальный шаг ставки.
+				.full-item__form-alert
+					| Вы должны быть авторизованы, чтобы сделать ставку:
+					a(href="sign-in.html")  войти
+					| или
+					a(href="registration.html")  зарегистрироваться.
+		.full-item__share-wrapper
+			.full-item__share-title Поделиться
+			//<!-- Go to www.addthis.com / dashboard to customize your tools-- >
+			.addthis_sharing_toolbox
 .full-item__description-wrapper
-   h3.full-item__description-title Описание лота
-   p Картина «Якорь» написана на дне Байкала на глубине 30 м в районе порта Байкал (Иркутская обл., западный берег оз. Байкал) 15 июля 2014 года.
-   p Подлинность картины, выставленной на аукцион, подтверждается автографом автора.
-   p Автор лота:
-      a Юрий Алексеев
-   p Размер 60 x 40 см.
-   p Холст подготовленный, масло.
-   .full-item__description-photo.lazy(data-original="img/item-photo.png")
+	h3.full-item__description-title Описание лота
+	p Картина «Якорь» написана на дне Байкала на глубине 30 м в районе порта Байкал (Иркутская обл., западный берег оз. Байкал) 15 июля 2014 года.
+	p Подлинность картины, выставленной на аукцион, подтверждается автографом автора.
+	p Автор лота:
+		a Юрий Алексеев
+	p Размер 60 x 40 см.
+	p Холст подготовленный, масло.
+	.full-item__description-photo.lazy(data-original="img/item-photo.png")
 
